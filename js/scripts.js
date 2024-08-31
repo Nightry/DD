@@ -37,13 +37,38 @@ function showSlides(n) {
 	}
 	for (let i = 0; i < slides.length; i++) {
 		slides[i].style.display = 'none';
+		slides[i].classList.remove('slide-in-left', 'slide-in-right');
 	}
+	slides[slideIndex].style.display = 'block';
+	slides[slideIndex].classList.add(
+		n > slideIndex ? 'slide-in-left' : 'slide-in-right'
+	);
 	for (let i = 0; i < dots.length; i++) {
 		dots[i].className = dots[i].className.replace(' active', '');
 	}
-	slides[slideIndex].style.display = 'block';
 	dots[slideIndex].className += ' active';
 }
+
+// Swipe functionality for mobile
+let startX;
+const slider = document.querySelector('.news-slider');
+
+slider.addEventListener('touchstart', (e) => {
+	startX = e.touches[0].clientX;
+});
+
+slider.addEventListener('touchmove', (e) => {
+	if (!startX) return;
+	let moveX = e.touches[0].clientX;
+	let diffX = startX - moveX;
+	if (diffX > 50) {
+		moveSlide(1);
+		startX = null;
+	} else if (diffX < -50) {
+		moveSlide(-1);
+		startX = null;
+	}
+});
 
 // Automatic slide transition
 //setInterval(() => {
