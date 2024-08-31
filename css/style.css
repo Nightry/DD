@@ -29,14 +29,6 @@ img {
 	-webkit-tap-highlight-color: transparent;
 }
 
-.container,
-.welcome,
-.news-slider,
-.navbar,
-.footer {
-	max-width: 100%;
-	overflow-x: hidden;
-}
 /* Navbar */
 .navbar {
 	display: flex;
@@ -442,6 +434,7 @@ img {
 	padding: 10px;
 	z-index: 1000;
 	display: none;
+	max-width: calc(100% - 20px);
 }
 
 .hamburger-button i {
@@ -501,7 +494,7 @@ img {
 	}
 
 	.navbar .container .logo {
-		margin-right: 10px; /* Adjust margin as needed */
+		margin-right: 10px;
 	}
 	.navbar .container .logo img {
 		max-width: 50px;
