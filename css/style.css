@@ -190,11 +190,11 @@ img {
 }
 
 .welcome {
-	margin-top: 90px;
+	margin-top: 0px;
 	/*background: url('/images/IndexBG.jpeg') no-repeat;*/
 	width: 100%;
 	height: 100%;
-	background-size: cover;
+
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -203,7 +203,7 @@ img {
 }
 
 .welcome .welcome-content {
-	padding: 150px 50px;
+	margin-top: 150px;
 }
 
 .welcome-content p {
@@ -417,7 +417,6 @@ img {
 
 .footer .container .disclaimer {
 	display: inline-block;
-	position: fixed;
 	text-align: center;
 	font-size: 12px;
 }
@@ -490,17 +489,22 @@ img {
 	}
 	.navbar .hamburger-button {
 		display: block;
+		top: 5px;
+		right: 0px;
 	}
 
 	.navbar .container .logo {
-		margin-right: 10px;
+		margin-right: 20px;
+		font-size: 20px;
 	}
 	.navbar .container .logo img {
 		max-width: 50px;
+		margin-right: 0px;
 	}
 	.navbar .socials ul {
 		display: flex;
 		padding: 0px 10px;
+		margin: 0px;
 	}
 	.navbar .socials ul li {
 		margin: 0 5px; /* Adjust spacing between social icons */
