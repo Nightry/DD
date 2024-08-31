@@ -191,7 +191,7 @@ img {
 
 .welcome {
 	margin-top: 90px;
-	background: url('/images/IndexBG.jpeg') no-repeat;
+	/*background: url('/images/IndexBG.jpeg') no-repeat;*/
 	width: 100%;
 	height: 100%;
 	background-size: cover;
@@ -213,17 +213,17 @@ img {
 	flex-direction: column;
 	padding: 20px 20px;
 	border-radius: 30px;
-	margin: 20;
+	margin: 20px;
 }
 
 /* News section */
 
 .news-slider {
 	position: relative;
-	max-width: 600px;
+	max-width: 800px;
 	margin: auto;
 	overflow: hidden;
-	height: 800px;
+	height: 400px;
 }
 
 .news-slider p {
@@ -231,9 +231,8 @@ img {
 	background-color: #967969;
 	z-index: 1;
 	flex-direction: column;
-	padding: 20px 20px;
+	padding: 10px 10px;
 	border-radius: 30px;
-	margin: 100px;
 }
 
 .news-slide {
@@ -243,7 +242,7 @@ img {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	padding: 20px;
+	margin: 40px;
 }
 .news-slide p {
 	margin: 0;
@@ -265,18 +264,19 @@ img {
 
 .prev,
 .next {
+	background: none;
 	cursor: pointer;
 	position: absolute;
 	top: 50%;
 	width: auto;
-	padding: 16px;
-	margin-top: -22px;
-	color: white;
+	padding: 15px;
+	margin-top: 0px;
+	color: black;
 	font-weight: bold;
-	font-size: 18px;
+	font-size: 40px;
 	transition: 0.6s ease;
-	border-radius: 0 3px 3px 0;
 	user-select: none;
+	transform: translateY(-50%);
 }
 
 .next {
@@ -286,7 +286,7 @@ img {
 
 .prev:hover,
 .next:hover {
-	color: #333;
+	color: #ffffff;
 }
 
 .dots-container {
@@ -311,30 +311,30 @@ img {
 }
 
 /* Swipe animation */
-@keyframes slide-in-left {
+@keyframes fade-in {
 	from {
-		transform: translateX(100%);
+		opacity: 0.2;
 	}
 	to {
-		transform: translateX(0);
+		opacity: 1;
 	}
 }
 
-@keyframes slide-in-right {
+@keyframes fade-out {
 	from {
-		transform: translateX(-100%);
+		opacity: 1;
 	}
 	to {
-		transform: translateX(0);
+		opacity: 0.2;
 	}
 }
 
-.slide-in-left {
-	animation: slide-in-left 0.5s forwards;
+.fade-in {
+	animation: fade-in 1s forwards;
 }
 
-.slide-in-right {
-	animation: slide-in-right 0.5s forwards;
+.fade-out {
+	animation: fade-out 1s forwards;
 }
 
 /* FAQ */
@@ -417,7 +417,7 @@ img {
 
 .footer .container .disclaimer {
 	display: inline-block;
-	position: center;
+	position: fixed;
 	text-align: center;
 	font-size: 12px;
 }
