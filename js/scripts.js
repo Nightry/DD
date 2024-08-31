@@ -16,13 +16,16 @@ $(document).ready(function () {
 // News
 
 let slideIndex = 0;
+let previousIndex = 0;
 showSlides(slideIndex);
 
 function moveSlide(n) {
+	previousIndex = slideIndex;
 	showSlides((slideIndex += n));
 }
 
 function currentSlide(n) {
+	previousIndex = slideIndex;
 	showSlides((slideIndex = n));
 }
 
@@ -37,12 +40,16 @@ function showSlides(n) {
 	}
 	for (let i = 0; i < slides.length; i++) {
 		slides[i].style.display = 'none';
-		slides[i].classList.remove('slide-in-left', 'slide-in-right');
+		slides[i].classList.remove('fade-in', 'fade-out');
 	}
-	slides[slideIndex].style.display = 'block';
-	slides[slideIndex].classList.add(
-		n > slideIndex ? 'slide-in-left' : 'slide-in-right'
-	);
+	slides[previousIndex].style.display = 'block';
+	slides[previousIndex].classList.add('fade-out');
+	setTimeout(() => {
+		slides[previousIndex].style.display = 'none';
+		slides[slideIndex].style.display = 'block';
+		slides[slideIndex].classList.add('fade-in');
+	}, 300);
+
 	for (let i = 0; i < dots.length; i++) {
 		dots[i].className = dots[i].className.replace(' active', '');
 	}
@@ -71,9 +78,9 @@ slider.addEventListener('touchmove', (e) => {
 });
 
 // Automatic slide transition
-//setInterval(() => {
-//	moveSlide(1);
-//}, 5000); // Change slide every 5 seconds
+setInterval(() => {
+	moveSlide(1);
+}, 15000); // Change slide every 15 seconds
 
 // FAQ
 document.addEventListener('DOMContentLoaded', () => {
