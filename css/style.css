@@ -2,13 +2,15 @@
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
+	-webkit-tap-highlight-color: transparent;
+	outline: none;
 }
 
 body {
 	font-family: 'Poppins', sans-serif;
 	font: size 16px;
 	line-height: 1.5;
-	background: #fff;
+	background: #f0d1a9;
 }
 
 a {
@@ -23,7 +25,18 @@ ul {
 img {
 	max-width: 100%;
 }
+.main-menu a {
+	-webkit-tap-highlight-color: transparent;
+}
 
+.container,
+.welcome,
+.news-slider,
+.navbar,
+.footer {
+	max-width: 100%;
+	overflow-x: hidden;
+}
 /* Navbar */
 .navbar {
 	display: flex;
@@ -75,6 +88,10 @@ img {
 	background-color: lightgreen;
 	border-radius: 30px;
 	cursor: pointer;
+}
+.non-clickable {
+	pointer-events: none;
+	cursor: default;
 }
 .navbar .socials ul {
 	margin: 20px;
@@ -186,6 +203,9 @@ img {
 	width: 100%;
 	height: 100%;
 	background-size: cover;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	/*  background-size: cover;*/
 	/*background-attachment: fixed;*/
 }
@@ -201,21 +221,22 @@ img {
 	flex-direction: column;
 	padding: 20px 20px;
 	border-radius: 30px;
-	margin: 100px;
+	margin: 20;
 }
 
 /* News section */
 
 .news-slider {
 	position: relative;
-	max-width: 400px;
+	max-width: 600px;
 	margin: auto;
 	overflow: hidden;
+	height: 800px;
 }
 
 .news-slider p {
 	color: aliceblue;
-	background-color: #d2b48c;
+	background-color: #967969;
 	z-index: 1;
 	flex-direction: column;
 	padding: 20px 20px;
@@ -226,7 +247,14 @@ img {
 .news-slide {
 	display: none;
 	text-align: center;
-	animation: fade 1s ease-in-out;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 20px;
+}
+.news-slide p {
+	margin: 0;
 }
 
 @keyframes fade {
@@ -266,7 +294,7 @@ img {
 
 .prev:hover,
 .next:hover {
-	background-color: rgba(0, 0, 0, 0.8);
+	color: #333;
 }
 
 .dots-container {
@@ -288,6 +316,33 @@ img {
 .active,
 .dot:hover {
 	background-color: #717171;
+}
+
+/* Swipe animation */
+@keyframes slide-in-left {
+	from {
+		transform: translateX(100%);
+	}
+	to {
+		transform: translateX(0);
+	}
+}
+
+@keyframes slide-in-right {
+	from {
+		transform: translateX(-100%);
+	}
+	to {
+		transform: translateX(0);
+	}
+}
+
+.slide-in-left {
+	animation: slide-in-left 0.5s forwards;
+}
+
+.slide-in-right {
+	animation: slide-in-right 0.5s forwards;
 }
 
 /* FAQ */
