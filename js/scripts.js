@@ -42,11 +42,11 @@ function showSlides(n) {
 		slides[i].style.display = 'none';
 		slides[i].classList.remove('fade-in', 'fade-out');
 	}
-	slides[previousIndex].style.display = 'block';
+	slides[previousIndex].style.display = 'flex';
 	slides[previousIndex].classList.add('fade-out');
 	setTimeout(() => {
 		slides[previousIndex].style.display = 'none';
-		slides[slideIndex].style.display = 'block';
+		slides[slideIndex].style.display = 'flex';
 		slides[slideIndex].classList.add('fade-in');
 	}, 300);
 
@@ -80,7 +80,7 @@ slider.addEventListener('touchmove', (e) => {
 // Automatic slide transition
 setInterval(() => {
 	moveSlide(1);
-}, 15000); // Change slide every 15 seconds
+}, 15000);
 
 // FAQ
 document.addEventListener('DOMContentLoaded', () => {
