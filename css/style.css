@@ -43,7 +43,7 @@ img {
 
 .navbar .container {
 	display: flex;
-	justify-content: center;
+	justify-content: left;
 	align-items: center;
 }
 
@@ -248,8 +248,8 @@ img {
 }
 
 .news-slide img {
-	width: 60%;
-	height: auto;
+	width: auto;
+	height: 400px;
 }
 
 .prev,
@@ -329,14 +329,12 @@ img {
 
 /* FAQ */
 .faq .faq-img {
-	width: auto;
 	display: flex;
 	align-items: center; /* This will make the element only as wide as its content */
 }
 
 .faq img {
-	width: 10%;
-	height: auto;
+	width: 120px;
 }
 
 .faq .faq-group {
@@ -426,6 +424,7 @@ img {
 	border: none;
 	cursor: pointer;
 	padding: 10px;
+	margin-right: 10px;
 	z-index: 1000;
 	display: none;
 }
