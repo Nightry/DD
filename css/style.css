@@ -3,7 +3,6 @@
 	margin: 0;
 	padding: 0;
 	-webkit-tap-highlight-color: transparent;
-	outline: none;
 }
 
 body {
@@ -25,6 +24,7 @@ ul {
 img {
 	max-width: 100%;
 }
+
 .main-menu a {
 	-webkit-tap-highlight-color: transparent;
 }
@@ -43,7 +43,7 @@ img {
 
 .navbar .container {
 	display: flex;
-	justify-content: left;
+	justify-content: center;
 	align-items: center;
 }
 
@@ -194,7 +194,6 @@ img {
 	/*background: url('/images/IndexBG.jpeg') no-repeat;*/
 	width: 100%;
 	height: 100%;
-
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -203,7 +202,8 @@ img {
 }
 
 .welcome .welcome-content {
-	margin-top: 150px;
+	margin-top: 120px;
+	text-align: center;
 }
 
 .welcome-content p {
@@ -242,23 +242,13 @@ img {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	margin: 40px;
-}
-.news-slide p {
-	margin: 0;
-}
-
-@keyframes fade {
-	from {
-		opacity: 0.4;
-	}
-	to {
-		opacity: 1;
-	}
+	margin-left: 40px;
+	margin-right: 40px;
+	opacity: 1;
 }
 
 .news-slide img {
-	width: 100%;
+	width: 60%;
 	height: auto;
 }
 
@@ -338,13 +328,19 @@ img {
 }
 
 /* FAQ */
+.faq .faq-img {
+	width: auto;
+	display: flex;
+	align-items: center; /* This will make the element only as wide as its content */
+}
 
-.faq {
-	padding: 40px 0;
+.faq img {
+	width: 10%;
+	height: auto;
 }
 
 .faq .faq-group {
-	border-bottom: 1px solid #ccc;
+	border-bottom: 2px solid #ad8605;
 	padding-bottom: 20px;
 }
 
@@ -416,7 +412,6 @@ img {
 }
 
 .footer .container .disclaimer {
-	display: inline-block;
 	text-align: center;
 	font-size: 12px;
 }
@@ -443,7 +438,7 @@ img {
 /*Mobile Menu */
 .mobile-menu {
 	position: fixed;
-	top: 82px;
+	top: 50px;
 	right: -300px;
 	width: 180px;
 	height: 100%;
@@ -469,6 +464,7 @@ img {
 	background-color: lightgreen; /* Same as main menu */
 	padding: 5px 0px;
 	margin: 0px;
+	margin-bottom: 10px;
 	display: block;
 	font-weight: 600;
 	font-size: 13px;
@@ -492,6 +488,9 @@ img {
 		top: 5px;
 		right: 0px;
 	}
+	.navbar .hamburger-button i {
+		color: #333;
+	}
 
 	.navbar .container .logo {
 		margin-right: 20px;
@@ -508,6 +507,9 @@ img {
 	}
 	.navbar .socials ul li {
 		margin: 0 5px; /* Adjust spacing between social icons */
+	}
+	.welcome .welcome-content {
+		margin-top: 80px;
 	}
 }
 
