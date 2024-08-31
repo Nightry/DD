@@ -203,7 +203,7 @@ img {
 }
 
 .welcome .welcome-content {
-	padding: 150px 150px;
+	padding: 150px 50px;
 }
 
 .welcome-content p {
@@ -426,7 +426,7 @@ img {
 .hamburger-button {
 	position: absolute;
 	text-align: center;
-	right: 10px;
+	right: 20px;
 	top: 16px;
 	background: none;
 	border: none;
@@ -434,7 +434,6 @@ img {
 	padding: 10px;
 	z-index: 1000;
 	display: none;
-	max-width: calc(100% - 20px);
 }
 
 .hamburger-button i {
