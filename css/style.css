@@ -415,8 +415,11 @@ img {
 }
 
 .footer {
-	padding: 40px 0;
+	padding-top: 20px;
 	background: #5c4033;
+	width: 100%;
+	max-width: 100%;
+	overflow: hidden;
 }
 
 .footer .container .footer-grid {
@@ -448,7 +451,8 @@ img {
 }
 .footer .container .address {
 	text-align: center;
-	padding: 20px;
+	margin-top: 10px;
+	padding-bottom: 10px;
 	border-bottom: 2px solid #ad8605;
 }
 .footer .container .disclaimer {
@@ -565,4 +569,24 @@ img {
 }
 
 @media (max-width: 500px) {
+	.footer .container .footer-grid {
+		display: block;
+		grid-template-columns: 1fr 0.5fr 1fr;
+		gap: 10px;
+		justify-content: center;
+		margin-bottom: 30px;
+	}
+	.footer .container .footer-grid .footer-logo {
+		margin-bottom: 30px;
+	}
+	.footer .container .footer-grid div {
+		margin-bottom: 30px;
+	}
+	.tokenomics .tokenomics-content {
+		display: block;
+	}
+	.faq .faq-img {
+		display: block;
+		text-align: center;
+	}
 }
