@@ -94,14 +94,22 @@ document.addEventListener('DOMContentLoaded', () => {
 		const groupBody = group.querySelector('.faq-group-body');
 		const icon = groupHeader.querySelector('i');
 
-		//Toggle icon
+		// Toggle icon
 		icon.classList.toggle('fa-plus');
 		icon.classList.toggle('fa-minus');
 
-		//Toggle visibility of body
-		groupBody.classList.toggle('open');
+		// Toggle visibility of body with animation
+		if (groupBody.classList.contains('open')) {
+			$(groupBody).slideUp('slow', function () {
+				groupBody.classList.remove('open');
+			});
+		} else {
+			$(groupBody).slideDown('slow', function () {
+				groupBody.classList.add('open');
+			});
+		}
 
-		//Close other open FAQ bodies
+		// Close other open FAQ bodies
 		const otherGroups = faqContainer.querySelectorAll('.faq-group');
 
 		otherGroups.forEach((otherGroup) => {
@@ -109,9 +117,13 @@ document.addEventListener('DOMContentLoaded', () => {
 				const otherGroupBody = otherGroup.querySelector('.faq-group-body');
 				const otherIcon = otherGroup.querySelector('.faq-group-header i');
 
-				otherGroupBody.classList.remove('open');
-				otherIcon.classList.remove('fa-minus');
-				otherIcon.classList.add('fa-plus');
+				if (otherGroupBody.classList.contains('open')) {
+					$(otherGroupBody).slideUp('slow', function () {
+						otherGroupBody.classList.remove('open');
+					});
+					otherIcon.classList.remove('fa-minus');
+					otherIcon.classList.add('fa-plus');
+				}
 			}
 		});
 	});
@@ -138,6 +150,25 @@ $('.menu-dropdown').on('click', function () {
 	$(this).find('.dropdown').slideToggle('slow');
 });
 
+// Hide mobile menu when clicking a button inside it
+$('.mobile-menu a').on('click', function () {
+	mobileMenu.removeClass('active');
+	hamburgerButton.removeClass('active');
+	hamburgerButton.html('<i class="fa-solid fa-bars"></i>');
+});
+
+// Hide mobile menu when clicking outside of it, except for the fa-bars icon
+$(document).on('click', function (e) {
+	if (
+		!$(e.target).closest('.mobile-menu, .hamburger-button').length &&
+		!$(e.target).hasClass('fa-bars')
+	) {
+		mobileMenu.removeClass('active');
+		hamburgerButton.removeClass('active');
+		hamburgerButton.html('<i class="fa-solid fa-bars"></i>');
+	}
+});
+
 // Handle window resize
 $(window).resize(function () {
 	if ($(window).width() > 670) {
@@ -145,4 +176,27 @@ $(window).resize(function () {
 		hamburgerButton.removeClass('active');
 		hamburgerButton.html('<i class="fa-solid fa-bars"></i>');
 	}
+});
+
+// Smooth scroll with offset for any section
+const links = document.querySelectorAll('a[href^="#"]');
+const offset = 0; // Adjust this value to set the offset
+
+links.forEach((link) => {
+	link.addEventListener('click', (e) => {
+		e.preventDefault();
+		const targetId = link.getAttribute('href').substring(1);
+		const target = document.getElementById(targetId);
+		if (target) {
+			const bodyRect = document.body.getBoundingClientRect().top;
+			const elementRect = target.getBoundingClientRect().top;
+			const elementPosition = elementRect - bodyRect;
+			const offsetPosition = elementPosition - offset;
+
+			window.scrollTo({
+				top: offsetPosition,
+				behavior: 'smooth',
+			});
+		}
+	});
 });
