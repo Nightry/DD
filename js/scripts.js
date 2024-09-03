@@ -1,86 +1,129 @@
 //Dropdown menu
-$(document).ready(function () {
-	$('.dropdown').hide();
+// $(document).ready(function () {
+// 	$('.dropdown').hide();
 
-	$('.menu-dropdown').hover(
-		function () {
-			$('.dropdown').stop(true, true).slideUp('slow');
-			$(this).find('.dropdown').stop(true, true).slideDown('slow');
-		},
-		function () {
-			$(this).find('.dropdown').stop(true, true).slideUp('slow');
-		}
-	);
+// 	$('.menu-dropdown').hover(
+// 		function () {
+// 			$('.dropdown').stop(true, true).slideUp('slow');
+// 			$(this).find('.dropdown').stop(true, true).slideDown('slow');
+// 		},
+// 		function () {
+// 			$(this).find('.dropdown').stop(true, true).slideUp('slow');
+// 		}
+// 	);
+// });
+document.addEventListener('DOMContentLoaded', function () {
+	const dropdowns = document.querySelectorAll('.menu-dropdown');
+
+	dropdowns.forEach((dropdown) => {
+		let timeout;
+
+		dropdown.addEventListener('mouseenter', function () {
+			clearTimeout(timeout);
+			const menu = this.querySelector('.dropdown');
+			menu.style.display = 'block';
+			menu.style.maxHeight = menu.scrollHeight + 'px';
+			menu.style.opacity = '1';
+		});
+
+		dropdown.addEventListener('mouseleave', function () {
+			const menu = this.querySelector('.dropdown');
+			menu.style.maxHeight = '0';
+			menu.style.opacity = '0';
+			timeout = setTimeout(() => {
+				if (!menu.matches(':hover') && !this.matches(':hover')) {
+					menu.style.display = 'none';
+				}
+			}, 300); // Match this duration with the CSS transition duration
+		});
+	});
 });
 
 // News
-
-let slideIndex = 0;
-let previousIndex = 0;
-showSlides(slideIndex);
-
-function moveSlide(n) {
-	previousIndex = slideIndex;
-	showSlides((slideIndex += n));
-}
-
-function currentSlide(n) {
-	previousIndex = slideIndex;
-	showSlides((slideIndex = n));
-}
-
-function showSlides(n) {
+$(document).ready(function () {
+	// Initial setup to hide all slides except the first one
 	let slides = document.getElementsByClassName('news-slide');
-	let dots = document.getElementsByClassName('dot');
-	if (n >= slides.length) {
-		slideIndex = 0;
-	}
-	if (n < 0) {
-		slideIndex = slides.length - 1;
-	}
-	for (let i = 0; i < slides.length; i++) {
+	for (let i = 1; i < slides.length; i++) {
 		slides[i].style.display = 'none';
-		slides[i].classList.remove('fade-in', 'fade-out');
 	}
-	slides[previousIndex].style.display = 'flex';
-	slides[previousIndex].classList.add('fade-out');
-	setTimeout(() => {
-		slides[previousIndex].style.display = 'none';
-		slides[slideIndex].style.display = 'flex';
-		slides[slideIndex].classList.add('fade-in');
-	}, 300);
 
-	for (let i = 0; i < dots.length; i++) {
-		dots[i].className = dots[i].className.replace(' active', '');
+	// Show the first slide
+	slides[0].style.display = 'flex';
+
+	// Initialize the slide index
+	let slideIndex = 0;
+	let previousIndex = 0;
+
+	// Function to show slides
+	function showSlides(n) {
+		let slides = document.getElementsByClassName('news-slide');
+		let dots = document.getElementsByClassName('dot');
+		if (n >= slides.length) {
+			slideIndex = 0;
+		}
+		if (n < 0) {
+			slideIndex = slides.length - 1;
+		}
+		for (let i = 0; i < slides.length; i++) {
+			slides[i].style.display = 'none';
+			slides[i].classList.remove('fade-in', 'fade-out');
+		}
+		slides[previousIndex].style.display = 'flex';
+		slides[previousIndex].classList.add('fade-out');
+		setTimeout(() => {
+			slides[previousIndex].style.display = 'none';
+			slides[slideIndex].style.display = 'flex';
+			slides[slideIndex].classList.add('fade-in');
+		}, 300);
+
+		for (let i = 0; i < dots.length; i++) {
+			dots[i].className = dots[i].className.replace(' active', '');
+		}
+		dots[slideIndex].className += ' active';
 	}
-	dots[slideIndex].className += ' active';
-}
 
-// Swipe functionality for mobile
-let startX;
-const slider = document.querySelector('.news-slider');
+	// Function to move slides
+	function moveSlide(n) {
+		previousIndex = slideIndex;
+		showSlides((slideIndex += n));
+	}
 
-slider.addEventListener('touchstart', (e) => {
-	startX = e.touches[0].clientX;
-});
+	// Function to set the current slide
+	function currentSlide(n) {
+		previousIndex = slideIndex;
+		showSlides((slideIndex = n));
+	}
 
-slider.addEventListener('touchmove', (e) => {
-	if (!startX) return;
-	let moveX = e.touches[0].clientX;
-	let diffX = startX - moveX;
-	if (diffX > 50) {
+	// Swipe functionality for mobile
+	let startX;
+	const slider = document.querySelector('.news-slider');
+
+	slider.addEventListener('touchstart', (e) => {
+		startX = e.touches[0].clientX;
+	});
+
+	slider.addEventListener('touchmove', (e) => {
+		if (!startX) return;
+		let moveX = e.touches[0].clientX;
+		let diffX = startX - moveX;
+		if (diffX > 50) {
+			moveSlide(1);
+			startX = null;
+		} else if (diffX < -50) {
+			moveSlide(-1);
+			startX = null;
+		}
+	});
+
+	// Automatic slide transition
+	setInterval(() => {
 		moveSlide(1);
-		startX = null;
-	} else if (diffX < -50) {
-		moveSlide(-1);
-		startX = null;
-	}
-});
+	}, 15000);
 
-// Automatic slide transition
-setInterval(() => {
-	moveSlide(1);
-}, 15000);
+	// Expose functions to global scope for onclick handlers
+	window.moveSlide = moveSlide;
+	window.currentSlide = currentSlide;
+});
 
 // FAQ
 document.addEventListener('DOMContentLoaded', () => {
