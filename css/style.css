@@ -13,11 +13,11 @@ body {
 	font-weight: 300;
 	font-style: normal;
 	line-height: 1.5;
-	background: #5c4033;
+	background: #005c00;
 }
 a {
 	text-decoration: none;
-	color: black;
+	color: #ad8605;
 	font-weight: bold;
 }
 
@@ -35,7 +35,7 @@ section {
 
 /* Stylowanie całego paska przewijania */
 ::-webkit-scrollbar {
-	width: 12px; /* Szerokość paska przewijania */
+	width: 10px; /* Szerokość paska przewijania */
 }
 
 /* Stylowanie tła paska przewijania */
@@ -45,12 +45,12 @@ section {
 
 /* Stylowanie uchwytu paska przewijania */
 ::-webkit-scrollbar-thumb {
-	background: #888;
+	background: #00800052;
 }
 
 /* Stylowanie uchwytu paska przewijania podczas najechania */
-::-webkit-scrollbar-thumb:hover {
-	background: #555;
+::-webkit-scrollbar-thumb:active {
+	background: #008000;
 }
 
 h2 {
@@ -58,7 +58,7 @@ h2 {
 	background-color: #967969;
 	z-index: 1;
 	border-radius: 30px;
-	color: #0acf11;
+	color: #ad8605;
 	font-size: 2.5rem;
 	margin-bottom: 20px;
 	padding: 20px 20px;
@@ -67,10 +67,10 @@ h2 {
 
 h1 {
 	font-family: 'Nerko One', sans-serif;
-	background-color: #967969;
+	background-color: #66bb6a;
 	z-index: 1;
 	border-radius: 30px;
-	color: #0acf11;
+	color: #ad8605;
 	font-size: 3.5rem;
 	margin-bottom: 20px;
 	padding: 20px 20px;
@@ -86,11 +86,7 @@ h1 {
 	top: 0;
 	width: 100%;
 	z-index: 1000;
-	background: linear-gradient(
-		0deg,
-		rgba(210, 180, 140, 1) 0%,
-		rgba(150, 121, 105, 1) 100%
-	);
+	background: #66bb6a;
 }
 
 .navbar .container {
@@ -132,7 +128,6 @@ h1 {
 	display: block;
 	font-weight: 600;
 	transition: 0.5s;
-	background: #66bb6a;
 	border-radius: 30px;
 }
 
@@ -155,6 +150,7 @@ h1 {
 	background: #66bb6a;
 	border-radius: 30px;
 	cursor: default;
+	border: 2px solid #ad8605;
 }
 
 .socials ul {
@@ -175,6 +171,7 @@ h1 {
 /* Dropdown Menu */
 .menu-dropdown {
 	position: relative;
+	color: #ad8605;
 }
 
 .menu-dropdown.active {
@@ -186,7 +183,7 @@ h1 {
 	position: absolute;
 	left: 50%;
 	transform: translateX(-50%);
-	background-color: #d2b48c;
+	background-color: #66bb6a;
 	z-index: 999;
 	border-radius: 20px;
 	flex-direction: column;
@@ -275,7 +272,6 @@ h1 {
 
 .welcome-content p {
 	color: white;
-	background: #967969;
 	z-index: 1;
 	flex-direction: column;
 	padding: 20px 20px;
@@ -507,6 +503,7 @@ h1 {
 	max-width: 100%;
 	overflow: hidden;
 	color: #fff8e1;
+	background: #5c4033;
 }
 
 .footer-grid {
@@ -521,7 +518,7 @@ h1 {
 }
 
 .footer i {
-	color: #fff8e1;
+	color: white;
 	font-size: 1rem;
 }
 
@@ -583,7 +580,7 @@ h1 {
 
 .mobile-menu {
 	position: fixed;
-	top: 100px;
+	top: 110px;
 	right: -300px;
 	width: 250px;
 	height: 100%;
@@ -631,9 +628,7 @@ h1 {
 	html {
 		font-size: 16px;
 	}
-	h1,
-	h2 {
-	}
+
 	.navbar {
 		display: inline-block;
 		align-items: left;
