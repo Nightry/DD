@@ -264,18 +264,16 @@ h1 {
 .welcome-content {
 	text-align: center;
 	align-items: center;
-	display: flex;
 	display: grid;
 	grid-template-columns: 0.5fr 0.5fr;
+	gap: 20px;
 }
 
 .welcome-content p {
 	color: white;
 	z-index: 1;
 	flex-direction: column;
-	padding: 20px 20px;
 	border-radius: 30px;
-	margin-bottom: 20px;
 }
 
 /*Rich Rex section*/
