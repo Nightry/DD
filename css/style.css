@@ -132,9 +132,10 @@ h1 {
 	padding: 15px 25px;
 	display: block;
 	font-size: 1.25rem;
-	background: #008000;
+	background: #f6a057;
 	border-radius: 30px;
 	margin-right: 20px;
+	color: white;
 }
 
 .main-menu ul li p {
