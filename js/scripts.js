@@ -34,15 +34,15 @@ document.addEventListener('DOMContentLoaded', function () {
 				if (!menu.matches(':hover') && !this.matches(':hover')) {
 					menu.style.display = 'none';
 				}
-			}, 300); // Match this duration with the CSS transition duration
+			}, 300); 
 		});
 	});
 });
 
-// News
+// Gallery
 $(document).ready(function () {
 	// Initial setup to hide all slides except the first one
-	let slides = document.getElementsByClassName('news-slide');
+	let slides = document.getElementsByClassName('gallery-slide');
 	for (let i = 1; i < slides.length; i++) {
 		slides[i].style.display = 'none';
 	}
@@ -56,7 +56,7 @@ $(document).ready(function () {
 
 	// Function to show slides
 	function showSlides(n) {
-		let slides = document.getElementsByClassName('news-slide');
+		let slides = document.getElementsByClassName('gallery-slide');
 		let dots = document.getElementsByClassName('dot');
 		if (n >= slides.length) {
 			slideIndex = 0;
@@ -96,7 +96,7 @@ $(document).ready(function () {
 
 	// Swipe functionality for mobile
 	let startX;
-	const slider = document.querySelector('.news-slider');
+	const slider = document.querySelector('.gallery-slider');
 
 	slider.addEventListener('touchstart', (e) => {
 		startX = e.touches[0].clientX;
