@@ -261,13 +261,12 @@ h1 {
 	background-size: 100% 100vh; */
 }
 
-.welcome-content img {
-	text-align: center;
-	margin-bottom: 20px;
-}
-
 .welcome-content {
 	text-align: center;
+	align-items: center;
+	display: flex;
+	display: grid;
+	grid-template-columns: 0.5fr 0.5fr;
 }
 
 .welcome-content p {
@@ -621,6 +620,9 @@ h1 {
 @media (max-width: 900px) {
 	html {
 		font-size: 18px;
+	}
+	.welcome-content {
+		display: block;
 	}
 }
 
