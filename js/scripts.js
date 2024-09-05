@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', function () {
 				if (!menu.matches(':hover') && !this.matches(':hover')) {
 					menu.style.display = 'none';
 				}
-			}, 300); 
+			}, 300);
 		});
 	});
 });
@@ -213,17 +213,17 @@ $(document).on('click', function (e) {
 });
 
 // Handle window resize
-$(window).resize(function () {
-	if ($(window).width() > 670) {
-		mobileMenu.removeClass('active');
-		hamburgerButton.removeClass('active');
-		hamburgerButton.html('<i class="fa-solid fa-bars"></i>');
-	}
-});
+// $(window).resize(function () {
+// 	if ($(window).width() > 670) {
+// 		mobileMenu.removeClass('active');
+// 		hamburgerButton.removeClass('active');
+// 		hamburgerButton.html('<i class="fa-solid fa-bars"></i>');
+// 	}
+// });
 
 // Smooth scroll with offset for any section
 const links = document.querySelectorAll('a[href^="#"]');
-const offset = 0; // Adjust this value to set the offset
+const offset = 120; // Adjust this value to set the offset
 
 links.forEach((link) => {
 	link.addEventListener('click', (e) => {
