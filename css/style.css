@@ -13,7 +13,7 @@ body {
 	font-weight: 400;
 	font-style: normal;
 	line-height: 1.5;
-	background: #005c00;
+	background: #1a442b;
 }
 a,
 p {
@@ -59,7 +59,7 @@ h2 {
 	/* background-color: #967969; */
 	z-index: 1;
 	border-radius: 30px;
-	color: #f6a057;
+	color: #f3a01b;
 	font-size: 2.5rem;
 	margin-bottom: 20px;
 	padding: 20px 20px;
@@ -69,7 +69,7 @@ h2 {
 h1 {
 	font-family: 'Oswald', sans-serif;
 	z-index: 1;
-	color: #f6a057;
+	color: #f3a01b;
 	font-size: 3.5rem;
 	margin-bottom: 10px;
 	text-align: center;
@@ -83,7 +83,7 @@ h1 {
 	top: 0;
 	width: 100%;
 	z-index: 1000;
-	background: #66bb6a;
+	background: #60c88a;
 }
 .navbar .container {
 	display: flex;
@@ -101,7 +101,8 @@ h1 {
 }
 .navbar .container .logo a {
 	display: flex;
-	color: #f6a057;
+	color: #f3a01b;
+	font-weight: 300;
 }
 .navbar .container .logo img {
 	max-width: 100px;
@@ -126,14 +127,14 @@ h1 {
 	display: block;
 	font-weight: 600;
 	border-radius: 30px;
-	background: #66bb6a;
-	border: 5px solid #f6a057;
+	background: #60c88a;
+	border: 5px solid#f3a01b;
 }
 .buybutton a {
 	padding: 15px 25px;
 	display: block;
 	font-size: 1.25rem;
-	background: #f6a057;
+	background: #f3a01b;
 	border-radius: 30px;
 	margin: 0 20px;
 }
@@ -143,11 +144,11 @@ h1 {
 	display: block;
 	font-size: 1.25rem;
 	font-weight: 600;
-	background: #66bb6a;
+	background: #60c88a;
 	border-radius: 30px;
 	cursor: default;
-	border: 3px solid #f6a057;
-	color: #f6a057;
+	border: 3px solid #f3a01b;
+	color: #f3a01b;
 }
 .socials ul {
 	margin: 10px;
@@ -179,7 +180,7 @@ h1 {
 	position: absolute;
 	left: 50%;
 	transform: translateX(-50%);
-	background-color: #66bb6a;
+	background-color: #60c88a;
 	z-index: 999;
 	border-radius: 30px;
 	flex-direction: column;
@@ -205,7 +206,7 @@ h1 {
 }
 .hamburger-button i {
 	font-size: 40px;
-	color: #f6a057;
+	color: #f3a01b;
 }
 
 /*Mobile Menu */
@@ -214,7 +215,7 @@ h1 {
 	padding: 15px 25px;
 	display: block;
 	font-size: 1rem;
-	background: #f6a057;
+	background: #f3a01b;
 	border-radius: 30px;
 	color: white;
 }
@@ -225,7 +226,7 @@ h1 {
 	width: 250px;
 	height: 100%;
 	z-index: 100;
-	background: #66bb6a;
+	background: #60c88a;
 	transition: right 0.3s ease-in-out;
 	text-align: center;
 	overflow: auto;
@@ -236,7 +237,7 @@ h1 {
 }
 .mobile-menu ul li a {
 	padding: 10px 5px;
-	background: #66bb6a;
+	background: #60c88a;
 	display: block;
 	font-weight: 600;
 	font-size: 0.75rem;
@@ -246,7 +247,7 @@ h1 {
 	margin-left: 20px;
 	margin-right: 20px;
 	margin-bottom: 10px;
-	border: 5px solid #f6a057;
+	border: 5px solid #f3a01b;
 }
 .mobile-menu ul p {
 	margin-bottom: 10px;
@@ -342,7 +343,7 @@ h1 {
 }
 .prev:hover,
 .next:hover {
-	color: #f6a057;
+	color: #f3a01b;
 }
 .dots-container {
 	margin-top: 10px;
@@ -360,7 +361,7 @@ h1 {
 }
 .dot.active,
 .dot:hover {
-	background-color: #f6a057;
+	background-color: #f3a01b;
 }
 
 /* Tokenomics */
@@ -483,7 +484,7 @@ h1 {
 .footer .container a {
 	padding: 0px;
 	margin: 0px;
-	color: #66bb6a;
+	color: #60c88a;
 }
 
 .footer .container a:hover {
