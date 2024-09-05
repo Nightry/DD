@@ -1,17 +1,4 @@
-//Dropdown menu
-// $(document).ready(function () {
-// 	$('.dropdown').hide();
-
-// 	$('.menu-dropdown').hover(
-// 		function () {
-// 			$('.dropdown').stop(true, true).slideUp('slow');
-// 			$(this).find('.dropdown').stop(true, true).slideDown('slow');
-// 		},
-// 		function () {
-// 			$(this).find('.dropdown').stop(true, true).slideUp('slow');
-// 		}
-// 	);
-// });
+//Dropdown main menu
 document.addEventListener('DOMContentLoaded', function () {
 	const dropdowns = document.querySelectorAll('.menu-dropdown');
 
@@ -212,14 +199,14 @@ $(document).on('click', function (e) {
 	}
 });
 
-// Handle window resize
-// $(window).resize(function () {
-// 	if ($(window).width() > 670) {
-// 		mobileMenu.removeClass('active');
-// 		hamburgerButton.removeClass('active');
-// 		hamburgerButton.html('<i class="fa-solid fa-bars"></i>');
-// 	}
-// });
+// Hide mobile-menu when screen resizes (from small back to big)
+$(window).resize(function () {
+	if ($(window).width() > 1100) {
+		mobileMenu.removeClass('active');
+		hamburgerButton.removeClass('active');
+		hamburgerButton.html('<i class="fa-solid fa-bars"></i>');
+	}
+});
 
 // Smooth scroll with offset for any section
 const links = document.querySelectorAll('a[href^="#"]');
