@@ -9,15 +9,16 @@ html {
 }
 
 body {
-	font-family: 'Poppins', sans-serif;
-	font-weight: 300;
+	font-family: 'Protest Guerrilla', sans-serif;
+	font-weight: 400;
 	font-style: normal;
 	line-height: 1.5;
 	background: #005c00;
 }
-a {
+a,
+p {
 	text-decoration: none;
-	color: #f6a057;
+	color: white;
 	font-weight: bold;
 }
 
@@ -66,7 +67,7 @@ h2 {
 }
 
 h1 {
-	font-family: 'Nerko One', sans-serif;
+	font-family: 'Oswald', sans-serif;
 	z-index: 1;
 	color: #f6a057;
 	font-size: 3.5rem;
@@ -78,7 +79,6 @@ h1 {
 .navbar {
 	display: flex;
 	padding: 10px 0px;
-	align-items: center;
 	position: sticky;
 	top: 0;
 	width: 100%;
@@ -88,15 +88,14 @@ h1 {
 
 .navbar .container {
 	display: flex;
-	align-items: center;
 	margin: 0 auto;
+	justify-content: space-between;
 }
 
 /* Usunac przy zmianie loga */
 .navbar .container .logo {
 	display: flex;
 	align-items: center;
-	margin-right: 30px;
 	font-size: 1.5rem;
 	font-family: 'Nerko One', cursive;
 	font-weight: 600;
@@ -104,15 +103,17 @@ h1 {
 
 .navbar .container .logo a {
 	display: flex;
+	color: #f6a057;
 }
 
 .navbar .container .logo img {
-	max-width: 80px;
-	margin-right: 5px;
+	max-width: 100px;
+	margin-right: 10px;
 }
 
-.main-menu {
+.navbar-content {
 	display: flex;
+	align-items: center;
 }
 
 .main-menu ul {
@@ -121,11 +122,11 @@ h1 {
 
 .main-menu ul li a {
 	padding: 10px 20px;
-	margin: 10px;
+	margin: 10px 10px;
 	display: block;
 	font-weight: 600;
-	transition: 0.5s;
 	border-radius: 30px;
+	background: #f6a057;
 }
 
 .buybutton a {
@@ -134,8 +135,7 @@ h1 {
 	font-size: 1.25rem;
 	background: #f6a057;
 	border-radius: 30px;
-	margin-right: 20px;
-	color: white;
+	margin: 0 20px;
 }
 
 .main-menu ul li p {
@@ -144,7 +144,6 @@ h1 {
 	display: block;
 	font-size: 1.25rem;
 	font-weight: 600;
-	transition: 0.5s;
 	background: #66bb6a;
 	border-radius: 30px;
 	cursor: default;
@@ -153,24 +152,28 @@ h1 {
 }
 
 .socials ul {
-	margin-left: 20px;
+	margin: 10px;
 	font-weight: 600;
 	gap: 5px;
 	font-size: 1.7rem;
 }
 
-.socials ul a:hover,
 .navbar ul li a:hover,
 .buybutton a:hover,
 .mobile-buybutton a:hover {
-	color: #f6a057;
+	color: grey;
+	transition: 0.5s;
+	background-color: #ffd4af;
+}
+
+.socials ul a:hover {
+	color: grey;
 	transition: 0.5s;
 }
 
 /* Dropdown Menu */
 .menu-dropdown {
 	position: relative;
-	color: #ad8605;
 }
 
 .menu-dropdown.active {
@@ -184,18 +187,14 @@ h1 {
 	transform: translateX(-50%);
 	background-color: #66bb6a;
 	z-index: 999;
-	border-radius: 20px;
+	border-radius: 30px;
 	flex-direction: column;
 	box-shadow: 0px 0px 2px 2px rgb(0 0 0 / 20%);
 	transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out;
-	max-height: 0;
 	overflow: hidden;
-	opacity: 0;
 }
 
 .menu-dropdown .dropdown li {
-	padding-top: 0px;
-	padding-bottom: 0px;
 	text-align: center;
 }
 
@@ -203,6 +202,7 @@ h1 {
 
 .container {
 	max-width: 1100px;
+	width: 100%;
 	margin: 20px auto;
 	padding: 0px 15px 0px;
 }
@@ -213,52 +213,12 @@ h1 {
 	padding: 0 5px 0px;
 }
 
-/*Text Classes */
-.text-xxl {
-	font-size: 3rem;
-	line-height: 1.2;
-	font-weight: 600;
-	margin: 40px 0 20px;
-}
-
-.text-xl {
-	font-size: 2.2rem;
-	line-height: 1.4;
-	font-weight: normal;
-	margin: 40px 0 20px;
-}
-
-.text-l {
-	font-size: 1.8rem;
-	line-height: 1.4;
-	font-weight: normal;
-	margin: 30px 0 20px;
-}
-
-.text-m {
-	font-size: 1.2rem;
-	line-height: 1.4;
-	font-weight: normal;
-	margin: 20px 0 10px;
-}
-
-.text-s {
-	font-size: 0.9rem;
-	line-height: 1.4;
-	font-weight: normal;
-	margin: 10px 0 5px;
-}
-
-.text-center {
-	text-align: center;
-}
-
 /*Welcome section*/
-.welcome {
-	/* background-image: url('/images/IndexBG.jpeg');
+/* .welcome {
+ background-image: url('/images/IndexBG.jpeg');
 	background-repeat: no-repeat;
-	background-size: 100% 100vh; */
-}
+	background-size: 100% 100vh; 
+} */
 
 .welcome-content {
 	text-align: center;
@@ -268,12 +228,8 @@ h1 {
 	gap: 20px;
 }
 
-.welcome-content p {
-	color: white;
-	z-index: 1;
-	flex-direction: column;
-	border-radius: 30px;
-}
+/* .welcome-content p {
+} */
 
 /*Rich Rex section*/
 .richrex-content div {
@@ -283,7 +239,6 @@ h1 {
 	margin-bottom: 30px;
 	text-align: center;
 	align-items: center;
-	display: flex;
 }
 .richrex p {
 	color: aliceblue;
@@ -656,11 +611,9 @@ h1 {
 		padding: 10px 10px;
 		margin: 0px;
 	}
-
 	.richrex-content div {
 		display: block;
 	}
-
 	.next,
 	.prev {
 		display: none;
