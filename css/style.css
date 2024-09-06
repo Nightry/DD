@@ -34,25 +34,19 @@ section {
 	margin-bottom: 2rem;
 }
 
-/* Stylowanie całego paska przewijania */
-::-webkit-scrollbar {
-	width: 10px; /* Szerokość paska przewijania */
+/* Stylowanie paska przewijania */
+/* ::-webkit-scrollbar {
+	width: 10px; 
 }
-
-/* Stylowanie tła paska przewijania */
 ::-webkit-scrollbar-track {
 	background: #d2b48c;
 }
-
-/* Stylowanie uchwytu paska przewijania */
 ::-webkit-scrollbar-thumb {
 	background: #00800052;
 }
-
-/* Stylowanie uchwytu paska przewijania podczas najechania */
 ::-webkit-scrollbar-thumb:active {
 	background: #008000;
-}
+} */
 
 h2 {
 	font-family: 'Oswald', sans-serif;
@@ -83,7 +77,8 @@ h1 {
 	top: 0;
 	width: 100%;
 	z-index: 1000;
-	background: #60c88a;
+	/* background: #60c88a; */
+	background: #54af79;
 }
 .navbar .container {
 	display: flex;
@@ -101,7 +96,7 @@ h1 {
 	display: flex;
 	align-items: center;
 	font-family: 'Oswald', cursive;
-	color: #f3a01b;
+	color: #1a442b;
 	font-weight: 600;
 	font-size: 2rem;
 }
@@ -127,14 +122,16 @@ h1 {
 	flex-grow: 1;
 	font-size: 2rem;
 }
-.main-menu ul li a {
-	padding: 0.5rem 1rem;
+.dropdown a {
+	padding: 0.3rem 0.3rem;
 	margin: 0.5rem 0.5rem;
 	display: block;
-	font-weight: 600;
-	border-radius: 30px;
-	background: #60c88a;
-	border: 0.25rem solid#f3a01b;
+	font-size: 0.9rem;
+	background: #54af79;
+	/* border: 0.2rem solid#f3a01b; */
+	border-bottom: 0.2rem solid #f3a01b;
+	font-weight: 400;
+	white-space: nowrap;
 }
 .buybutton a {
 	padding: 0.75rem 1.25rem;
@@ -150,7 +147,7 @@ h1 {
 	display: block;
 	font-size: 1rem;
 	font-weight: 600;
-	background: #60c88a;
+	background: #54af79;
 	border-radius: 30px;
 	cursor: default;
 	border: 3px solid #f3a01b;
@@ -162,12 +159,15 @@ h1 {
 	gap: 0.25rem;
 	font-size: 1.6rem;
 }
-.navbar ul li a:hover,
-.buybutton a:hover,
-.mobile-buybutton a:hover {
+.buybutton a:hover {
 	color: goldenrod;
 	transition: 0.5s;
 	background-color: #ffd4af;
+}
+.navbar ul li a:hover,
+.mobile-buybutton a:hover {
+	color: goldenrod;
+	transition: 0.5s;
 }
 .socials a:hover {
 	transition: 0.5s;
@@ -186,7 +186,7 @@ h1 {
 	position: absolute;
 	left: 50%;
 	transform: translateX(-50%);
-	background-color: #60c88a;
+	background-color: #54af79;
 	z-index: 999;
 	border-radius: 30px;
 	flex-direction: column;
@@ -265,71 +265,119 @@ h1 {
 }
 
 /*Welcome section*/
-.welcome-content {
+.welcome-content p {
+	text-align: center;
+	margin-bottom: 1rem;
+}
+.welcome-content div {
 	text-align: center;
 	align-items: center;
-	display: grid;
-	grid-template-columns: 0.5fr 0.5fr;
-	gap: 1rem;
+	justify-content: center;
+	display: flex;
+	gap: 2rem;
 }
 .welcome img {
-	width: 25rem;
+	width: 30rem;
 }
-
-/* .welcome-content p {
-} */
 
 /*Rich Rex section*/
-.richrex-content div {
+.richrex-content {
 	display: flex;
 	text-align: center;
-	margin-bottom: 0.5rem;
-	text-align: center;
 	align-items: center;
+	justify-content: center;
+	gap: 2rem;
 }
-.richrex p {
-	color: white;
-	/* background-color: #967969; */
-	z-index: 1;
-	flex-direction: column;
-	padding: 1rem 1rem;
-	border-radius: 30px;
+.richrex-content p {
+	text-align: center;
 }
 .richrex-content img {
 	width: 30rem;
 }
 
-/* Tokenomics */
-.tokenomics .tokenomics-content {
-	margin-top: 1rem;
+/* Tokenomics section*/
+.tokenomics-content {
+	display: flex;
 	text-align: center;
 	align-items: center;
-	display: flex;
-	margin-bottom: 30px;
-	padding: 0.75rem 0.75rem;
+	justify-content: center;
+	gap: 2rem;
 }
 .tokenomics p {
-	color: white;
-	background-color: #967969;
-	z-index: 1;
-	padding: 0.5rem 0.5rem;
-	border-radius: 30px;
-	margin-bottom: 1rem;
-	text-align: center;
+	text-align: left;
 }
 .tokenomics-content img {
-	width: auto;
-	max-height: 20rem;
+	width: 30rem;
 }
-.tokenomics .tokenomics-content p {
-	color: aliceblue;
-	/* background-color: #967969; */
-	z-index: 1;
-	flex-direction: column;
-	padding: 0.75rem 0.75rem;
-	border-radius: 30px;
-	margin-bottom: 1rem;
+
+/* Utility section */
+.utility-content {
+	display: flex;
 	text-align: center;
+	align-items: center;
+	justify-content: center;
+	gap: 2rem;
+}
+.utility img {
+	width: 30rem;
+}
+
+.utility p {
+	text-align: center;
+}
+
+/* Rodamap section */
+.roadmap-content {
+	display: flex;
+	text-align: center;
+	align-items: center;
+	justify-content: center;
+	gap: 2rem;
+}
+.roadmap img {
+	width: 20rem;
+}
+
+.roadmap p:not(.title) {
+	text-align: left;
+	margin-bottom: 0.5rem;
+}
+.roadmap .title {
+	text-align: left;
+	color: #f3a01b;
+}
+
+/* Community section */
+.community-content {
+	display: block;
+	text-align: center;
+	align-items: center;
+	justify-content: center;
+	gap: 2rem;
+}
+.community img {
+	width: 20rem;
+}
+
+.community p {
+	text-align: center;
+	margin-bottom: 1rem;
+}
+.community i {
+	text-align: center;
+	padding: 0.5rem 0.5rem;
+	font-size: 2rem;
+}
+.community i:hover {
+	transition: 0.5s;
+	color: goldenrod;
+}
+.community-links {
+	display: flex;
+	text-align: center;
+	align-items: center;
+	justify-content: center;
+	gap: 0.5rem;
 }
 /* Gallery section */
 .gallery-slider {
@@ -384,7 +432,7 @@ h1 {
 }
 .prev:hover,
 .next:hover {
-	color: #f3a01b;
+	color: goldenrod;
 }
 .dots-container {
 	margin-top: 0.5rem;
@@ -402,7 +450,7 @@ h1 {
 }
 .dot.active,
 .dot:hover {
-	background-color: #f3a01b;
+	background-color: goldenrod;
 }
 
 /* FAQ */
@@ -500,7 +548,7 @@ h1 {
 }
 
 .footer .container a:hover {
-	color: gold;
+	color: goldenrod;
 	transition: 0.5s;
 }
 
@@ -555,9 +603,13 @@ h1 {
 	}
 }
 
-@media (max-width: 800px) {
+@media (max-width: 900px) {
 	html {
 		font-size: 18px;
+	}
+	.socials a:hover,
+	.community-links i:hover {
+		color: white;
 	}
 	/* .gallery-slide {
 		height: 400px;
@@ -589,13 +641,37 @@ h1 {
 	.welcome-content {
 		display: block;
 	}
-	.richrex-content div {
+	.welcome-content img {
+		margin-bottom: 0.5rem;
+	}
+	.welcome-content div {
 		display: block;
+	}
+	.richrex-content {
+		display: block;
+	}
+	.richrex-content p {
+		margin-bottom: 0.5rem;
 	}
 	.tokenomics-content {
 		display: block;
 	}
+	.tokenomics-content img {
+		margin-bottom: 0.5rem;
+	}
+	.tokenomics-content p {
+		text-align: center;
+	}
+	.utility-content {
+		display: block;
+	}
+	.utility-content div {
+		margin-bottom: 0.5rem;
+	}
 	.footer .container .footer-grid {
+		display: block;
+	}
+	.roadmap-content {
 		display: block;
 	}
 	.gallery {
@@ -613,7 +689,7 @@ h1 {
 	}
 }
 
-@media (max-width: 600px) {
+@media (max-width: 700px) {
 	html {
 		font-size: 16px;
 	}
