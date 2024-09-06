@@ -208,6 +208,23 @@ $(window).resize(function () {
 	}
 });
 
+//Mobile menu dropdown
+$(document).ready(function () {
+	// Dodaj obsługę kliknięcia na elementy <p> z klasą .toggle-menu
+	$('.toggle-menu').click(function () {
+		// Znajdź bieżącą listę (następny element po <p>)
+		var currentMenu = $(this).next('.menu-list');
+
+		// Zamknij wszystkie inne listy, z wyjątkiem tej klikniętej
+		$('.menu-list').not(currentMenu).slideUp();
+		$('.toggle-menu').not(this).removeClass('menu-opened');
+
+		// Przełącz (otwórz lub zamknij) bieżące menu oraz zmień ikonę
+		currentMenu.stop(true, true).slideToggle();
+		$(this).toggleClass('menu-opened');
+	});
+});
+
 // Smooth scroll with offset for any section
 const links = document.querySelectorAll('a[href^="#"]');
 const offset = 120; // Adjust this value to set the offset
