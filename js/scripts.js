@@ -26,6 +26,7 @@ document.addEventListener('DOMContentLoaded', function () {
 	});
 });
 
+/*
 // Gallery
 $(document).ready(function () {
 	// Initial setup to hide all slides except the first one
@@ -111,6 +112,7 @@ $(document).ready(function () {
 	window.moveSlide = moveSlide;
 	window.currentSlide = currentSlide;
 });
+*/
 
 // FAQ
 document.addEventListener('DOMContentLoaded', () => {
