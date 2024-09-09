@@ -90,7 +90,7 @@ h1 {
 .navbar .container .logo {
 	display: flex;
 	align-items: center;
-	margin-right: 1rem;
+	margin-right: 2rem;
 }
 .navbar .container .logo p {
 	display: flex;
@@ -117,10 +117,16 @@ h1 {
 .main-menu ul {
 	display: flex;
 }
+
 .socials {
-	margin-left: 1rem;
+	display: flex;
 	flex-grow: 1;
 	font-size: 2rem;
+	gap: 0.2rem;
+}
+.socials a {
+	line-height: 0px;
+	padding: 0.2rem;
 }
 .dropdown a {
 	padding: 0.5rem 1rem;
@@ -153,11 +159,17 @@ h1 {
 	border: 3px solid #f3a01b;
 	color: white;
 }
-.socials ul {
+.main-menu a {
+	padding: 0.5rem 1rem;
 	margin: 0.5rem;
+	display: block;
+	font-size: 1rem;
 	font-weight: 600;
-	gap: 0.25rem;
-	font-size: 1.6rem;
+	background: #54af79;
+	border-radius: 30px;
+	cursor: pointer;
+	border: 3px solid #f3a01b;
+	color: white;
 }
 .buybutton a:hover {
 	color: goldenrod;
@@ -228,7 +240,7 @@ h1 {
 .mobile-menu {
 	position: fixed;
 	top: 5.5rem;
-	right: -500px;
+	right: -100%;
 	width: 17rem;
 	height: 100%;
 	z-index: 100;
@@ -318,12 +330,19 @@ h1 {
 	align-items: center;
 	justify-content: center;
 	gap: 2rem;
+	margin-bottom: 1rem;
 }
 .tokenomics p {
 	text-align: left;
 }
 .tokenomics-content img {
 	width: 30rem;
+}
+.tokenomics div span {
+	color: #f3a01b;
+}
+.tokenomics div p {
+	text-align: center;
 }
 
 /* Utility section */
@@ -512,7 +531,6 @@ h1 {
 /* Footer*/
 .footer-grid img {
 	max-width: 4rem;
-	margin-right: 0.5rem;
 }
 .footer {
 	width: 100%;
@@ -557,6 +575,9 @@ h1 {
 	padding: 0;
 	margin: 0;
 	color: #60c88a;
+}
+.footer p span {
+	color: #f3a01b;
 }
 
 .footer .container .footer-grid div {
@@ -709,12 +730,12 @@ h1 {
 	html {
 		font-size: 16px;
 	}
-	.socials {
+	/* .socials {
 		font-size: 1.5rem;
-	}
-	.navbar .container .logo p {
+	} */
+	/* .navbar .container .logo p {
 		font-size: 1.5rem;
-	}
+	} */
 }
 
 @media (max-width: 400px) {
