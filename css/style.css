@@ -305,13 +305,19 @@ h1 {
 	gap: 2rem;
 }
 .scene {
+	display: flex;
+	justify-content: center; /* Wyśrodkowanie poziome */
+	align-items: center; /* Wyśrodkowanie pionowe */
 	perspective: 1500px; /* Ustawienie głębszej perspektywy dla mocniejszego efektu 3D */
+	margin-bottom: 2rem;
 }
 
 .coin {
 	position: relative;
-	width: 400px;
-	height: 400px;
+	width: 40vw; /* Szerokość monety zależna od szerokości okna */
+	height: 40vw;
+	width: 20rem;
+	height: 20rem;
 	transform-style: preserve-3d; /* Umożliwia zachowanie trójwymiarowości dla dzieci */
 	animation: spin 6s linear infinite;
 	box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3); /* Okrągły cień */
@@ -344,8 +350,8 @@ h1 {
 	position: absolute;
 	top: 0;
 	left: 0;
-	width: 200px;
-	height: 200px;
+	width: 20rem;
+	height: 20rem;
 	border-radius: 50%;
 	transform: rotateX(90deg); /* Ustawienie krawędzi pod kątem */
 	background: linear-gradient(
@@ -354,7 +360,7 @@ h1 {
 		#ccc 75%
 	); /* Zastosowanie gradientu dla efektu grubości */
 	backface-visibility: hidden;
-	box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5); /* Cień wewnętrzny dodający głębi na krawędzi */
+	box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 /* Obracanie monety */
