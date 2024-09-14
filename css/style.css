@@ -6,6 +6,8 @@
 }
 html {
 	font-size: 20px;
+	scroll-behavior: smooth;
+	scroll-padding-top: 7rem;
 }
 
 body {
@@ -33,20 +35,6 @@ img {
 section {
 	margin-bottom: 2rem;
 }
-
-/* Stylowanie paska przewijania */
-/* ::-webkit-scrollbar {
-	width: 10px; 
-}
-::-webkit-scrollbar-track {
-	background: #d2b48c;
-}
-::-webkit-scrollbar-thumb {
-	background: #00800052;
-}
-::-webkit-scrollbar-thumb:active {
-	background: #008000;
-} */
 
 h2 {
 	font-family: 'Oswald', sans-serif;
@@ -398,14 +386,9 @@ h1 {
 
 /* Rodamap section */
 .roadmap-content {
-	display: flex;
-	text-align: center;
-	align-items: center;
-	justify-content: center;
-	gap: 2rem;
-}
-.roadmap img {
-	width: 20rem;
+	display: grid;
+	grid-template-columns: 0.5fr 1fr;
+	gap: 1rem;
 }
 
 .roadmap p:not(.title) {
@@ -451,50 +434,45 @@ h1 {
 }
 /* Gallery section */
 .gallery-slider {
-	position: relative;
+	display: flex;
+	text-align: center;
+	align-items: center;
+	justify-content: center;
 	margin: 0;
 	overflow: hidden;
 }
 .gallery-slide {
-	display: none;
-	text-align: center;
-	height: 35rem;
 	display: flex;
+	text-align: center;
 	align-items: center;
 	justify-content: center;
 	margin-left: 2rem;
 	margin-right: 2rem;
 	opacity: 1;
 }
-.gallery-slide img {
+/* .gallery-slide img {
 	width: auto;
 	max-height: 35rem;
-}
+} */
 .gallery-slide p {
-	color: aliceblue;
-	background-color: #967969;
 	z-index: 1;
-	flex-direction: column;
 	padding: 0.5rem 0.5rem;
-	border-radius: 30px;
 	align-items: center;
 	justify-content: center;
 	text-align: center;
 }
 .prev,
 .next {
-	background: none;
+	display: flex;
 	cursor: pointer;
-	position: absolute;
-	top: 50%;
-	width: auto;
-	padding: 0.75rem;
-	color: whitesmoke;
+	padding: 0 0.5rem;
+	color: white;
 	font-weight: bold;
 	font-size: 2rem;
 	transition: 0.6s ease;
 	user-select: none;
-	transform: translateY(-50%);
+	justify-content: center;
+	align-items: center;
 }
 .next {
 	right: 0;
@@ -613,6 +591,25 @@ h1 {
 	text-align: center;
 	font-size: 0.7rem;
 	margin-top: 1rem;
+}
+
+/* HOWTOBUY site*/
+.howtobuy-content {
+	display: block;
+	text-align: center;
+	margin: 10rem 0;
+}
+.howtobuy-content div {
+	margin: 1.5rem;
+}
+.howtobuy-content i {
+	margin: 0px 0.8rem;
+	font-size: 2rem;
+	color: #f3a01b;
+}
+.howtobuy-content p {
+	margin-bottom: 1rem;
+	gap: 2rem;
 }
 
 /* Animations*/
@@ -754,9 +751,9 @@ h1 {
 	.footer .container .footer-grid {
 		display: block;
 	}
-	.roadmap-content {
+	/* .roadmap-content {
 		display: block;
-	}
+	} */
 	.gallery {
 		display: block;
 	}
