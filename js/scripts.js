@@ -26,7 +26,6 @@ document.addEventListener('DOMContentLoaded', function () {
 	});
 });
 
-/*
 // Gallery
 $(document).ready(function () {
 	// Initial setup to hide all slides except the first one
@@ -36,7 +35,7 @@ $(document).ready(function () {
 	}
 
 	// Show the first slide
-	slides[0].style.display = 'flex';
+	slides[0].style.display = 'block';
 
 	// Initialize the slide index
 	let slideIndex = 0;
@@ -56,11 +55,11 @@ $(document).ready(function () {
 			slides[i].style.display = 'none';
 			slides[i].classList.remove('fade-in', 'fade-out');
 		}
-		slides[previousIndex].style.display = 'flex';
+		slides[previousIndex].style.display = 'block';
 		slides[previousIndex].classList.add('fade-out');
 		setTimeout(() => {
 			slides[previousIndex].style.display = 'none';
-			slides[slideIndex].style.display = 'flex';
+			slides[slideIndex].style.display = 'block';
 			slides[slideIndex].classList.add('fade-in');
 		}, 300);
 
@@ -104,15 +103,14 @@ $(document).ready(function () {
 	});
 
 	// Automatic slide transition
-	setInterval(() => {
-		moveSlide(1);
-	}, 15000);
+	// setInterval(() => {
+	// 	moveSlide(1);
+	// }, 15000);
 
 	// Expose functions to global scope for onclick handlers
 	window.moveSlide = moveSlide;
 	window.currentSlide = currentSlide;
 });
-*/
 
 // FAQ
 document.addEventListener('DOMContentLoaded', () => {
@@ -224,28 +222,5 @@ $(document).ready(function () {
 		// Przełącz (otwórz lub zamknij) bieżące menu oraz zmień ikonę
 		currentMenu.stop(true, true).slideToggle();
 		$(this).toggleClass('menu-opened');
-	});
-});
-
-// Smooth scroll with offset for any section
-const links = document.querySelectorAll('a[href^="#"]');
-const offset = 120; // Adjust this value to set the offset
-
-links.forEach((link) => {
-	link.addEventListener('click', (e) => {
-		e.preventDefault();
-		const targetId = link.getAttribute('href').substring(1);
-		const target = document.getElementById(targetId);
-		if (target) {
-			const bodyRect = document.body.getBoundingClientRect().top;
-			const elementRect = target.getBoundingClientRect().top;
-			const elementPosition = elementRect - bodyRect;
-			const offsetPosition = elementPosition - offset;
-
-			window.scrollTo({
-				top: offsetPosition,
-				behavior: 'smooth',
-			});
-		}
 	});
 });
