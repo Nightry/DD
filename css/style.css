@@ -11,7 +11,7 @@ html {
 }
 
 body {
-	font-family: 'Protest Guerrilla', sans-serif;
+	font-family: 'Lato', sans-serif;
 	font-weight: 400;
 	font-style: normal;
 	line-height: 1.5;
@@ -38,7 +38,6 @@ section {
 
 h2 {
 	font-family: 'Oswald', sans-serif;
-	/* background-color: #967969; */
 	z-index: 1;
 	border-radius: 30px;
 	color: #f3a01b;
@@ -65,7 +64,6 @@ h1 {
 	top: 0;
 	width: 100%;
 	z-index: 1000;
-	/* background: #60c88a; */
 	background: #54af79;
 	box-shadow: 0px 0px 2px 5px rgb(0 0 0 / 20%);
 }
@@ -240,10 +238,18 @@ h1 {
 }
 .mobile-menu p {
 	margin: 0rem 1rem 1rem;
-	padding: 0.5rem 0.25rem;
 	border-radius: 30px;
 	border: 5px solid #f3a01b;
 	cursor: pointer;
+}
+.mobile-menu p a {
+	display: flex;
+	border-radius: 30px;
+	padding: 0.5rem 1rem;
+	justify-content: center;
+}
+.mobile-menu .toggle-menu {
+	padding: 0.5rem 1rem;
 }
 .menu-list {
 	margin-bottom: 1rem;
@@ -308,9 +314,6 @@ h1 {
 	background-size: cover;
 	background-position: center;
 	box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.2);
-}
-.front {
-	/* opacity: 0.8; */
 }
 
 .back {
@@ -386,17 +389,28 @@ h1 {
 
 /* Rodamap section */
 .roadmap-content {
-	display: grid;
-	grid-template-columns: 0.5fr 1fr;
-	gap: 1rem;
+	/* display: grid;
+	grid-template-columns: 0.5fr 1fr; */
+	display: flex;
+	text-align: center;
+	align-items: center;
+	justify-content: center;
+	gap: 2rem;
 }
 
 .roadmap p:not(.title) {
 	text-align: left;
-	margin-bottom: 0.5rem;
+	margin-bottom: 0.2rem;
 }
 .roadmap .title {
 	text-align: left;
+	color: #f3a01b;
+	font-size: 1.5rem;
+}
+.roadmap-content img {
+	height: 20rem;
+}
+.roadmap-content i {
 	color: #f3a01b;
 }
 
@@ -450,10 +464,6 @@ h1 {
 	margin-right: 2rem;
 	opacity: 1;
 }
-/* .gallery-slide img {
-	width: auto;
-	max-height: 35rem;
-} */
 .gallery-slide p {
 	z-index: 1;
 	padding: 0.5rem 0.5rem;
@@ -539,6 +549,24 @@ h1 {
 .faq .faq-group .faq-group-body.open {
 	display: block;
 	margin-bottom: 0.75rem;
+}
+
+.form-messages {
+	display: flex;
+	justify-content: center;
+	margin-bottom: 20px;
+	padding: 10px;
+	border-radius: 4px;
+}
+.form-messages.success {
+	background-color: #d4edda;
+	color: #155724;
+	border: 1px solid #c3e6cb;
+}
+.form-messages.error {
+	background-color: #f8d7da;
+	color: #721c24;
+	border: 1px solid #f5c6cb;
 }
 
 /* Footer*/
@@ -698,22 +726,6 @@ h1 {
 	.community-links i:hover {
 		color: white;
 	}
-	/* .gallery-slide {
-		height: 400px;
-	} */
-	.next,
-	.prev {
-		display: none;
-	}
-	/* .gallery-slide {
-		padding: 5px;
-		margin: 0;
-		height: 400px;
-	}
-	.gallery-slider {
-		padding: 0;
-		margin: 0;
-	} */
 	.address {
 		word-wrap: break-word;
 	}
@@ -742,6 +754,9 @@ h1 {
 	.tokenomics-content p {
 		text-align: center;
 	}
+	.roadmap-content {
+		display: block;
+	}
 	.utility-content {
 		display: block;
 	}
@@ -751,15 +766,12 @@ h1 {
 	.footer .container .footer-grid {
 		display: block;
 	}
-	/* .roadmap-content {
-		display: block;
-	} */
 	.gallery {
 		display: block;
 	}
-	/* .footer .container .footer-grid div {
-		margin-bottom: 1.5rem;
-	} */
+	.roadmap-content img {
+		margin-bottom: 1rem;
+	}
 	.tokenomics .tokenomics-content {
 		display: block;
 	}
@@ -792,9 +804,6 @@ h1 {
 		margin-bottom: 1.5rem;
 		width: 100%;
 	}
-	/* .navbar .container .logo p {
-		font-size: 1.5rem;
-	} */
 }
 
 @media (max-width: 400px) {
