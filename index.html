@@ -21,6 +21,9 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="css/style.css">
     <link rel="shortcut icon" href="images/logo.png">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bangers&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
 
 </head>
 
@@ -239,62 +242,49 @@
                     Roar-map
                 </h2>
                 <div class="roadmap-content">
-                    <div>
-                        <img src="images/roadmap.png"
-                            alt="A dino with yellow glasses and yellow suit holding a treasure map. Roar-Map is written on it.">
-                    </div>
+
+                    <img src="images/roadmap.png"
+                        alt="A dino with yellow glasses and yellow suit holding a treasure map. Roar-Map is written on it.">
+
                     <div class="gallery-slider">
                         <span class="prev" onclick="moveSlide(-1)">&#10094;</span>
                         <div>
                             <div>
                                 <div class="gallery-slide">
-                                    <!-- <p class="title">Phase 1: Prehistoric Launch 🚀</p>
+                                    <p class="title">Phase 1: Prehistoric Launch 🚀</p>
                                     <p>Dinosaurs are back, and this time, they're on the blockchain! DinoDollar is here
                                         to
                                         show
                                         that
                                         even ancient creatures can moon!</p>
                                     <P><i class="fa-solid fa-check"></i> DinoDollar community launch</P>
-                                    <p><i class="fa-solid fa-check"></i> Mint 2,000,000,000 DINO$ tokens</p>
-                                    <p><i class="fa-solid fa-x"></i> Mint 2,000,000,000 tokens</p> -->
-                                    <img src="images/roadmap1.png" alt="">
+                                    <p><i class="fa-solid fa-check"></i> Development of DINO$ token</p>
+                                    <p><i class="fa-solid fa-check"></i> Minting 2,000,000,000 DINO$ tokens</p>
+                                    <p><i class="fa-solid fa-x"></i> Contract audit</p>
+                                    <p><i class="fa-solid fa-x"></i> Building the Fossil Fans community!</p>
+                                </div>
+                                <div class="gallery-slide">
+                                    <p class="title">Phase 2: Jurassic Presale 🦕</p>
+                                    <p>Now that we’ve dusted off the fossils, it's time to feed Rich Rex with hype. Who
+                                        needs meteor showers when you’ve got DINO$?</p>
+                                    <P><i class="fa-solid fa-x"></i> Presale launch</P>
+                                    <p><i class="fa-solid fa-x"></i> Robust marketing campaign</p>
+                                    <p><i class="fa-solid fa-x"></i> Influencer partnerships</p>
 
                                 </div>
                                 <div class="gallery-slide">
-                                    <i class="fa-solid fa-x"></i>
-                                    <p>Say hello to Rich Rex, the charismatic and mighty mascot of DinoDollar! With a
-                                        blend
-                                        of
-                                        prehistoric
-                                        power and contemporary cool, Rich Rex embodies the spirit of DinoDollar –
-                                        strong,
-                                        resilient,
-                                        and
-                                        ready to conquer new heights. Join Rich Rex and the DinoDollar community as we
-                                        pave
-                                        the
-                                        way
-                                        in
-                                        the
-                                        crypto realm.</p>
-
-                                </div>
-                                <div class="gallery-slide">
-                                    <p>Say hello to Rich Rex, the charismatic and mighty mascot of DinoDollar! With a
-                                        blend
-                                        of
-                                        prehistoric
-                                        power and contemporary cool, Rich Rex embodies the spirit of DinoDollar –
-                                        strong,
-                                        resilient,
-                                        and
-                                        ready to conquer new heights. Join Rich Rex and the DinoDollar community as we
-                                        pave
-                                        the
-                                        way
-                                        in
-                                        the
-                                        crypto realm.</p>
+                                    <p class="title">Phase 3: From Fossil to Function 🦖</p>
+                                    <p>Dinosaurs are back, and this time, they're on the blockchain! DinoDollar is here
+                                        to
+                                        show
+                                        that
+                                        even ancient creatures can moon!</p>
+                                    <P><i class="fa-solid fa-check"></i> DinoDollar community launch</P>
+                                    <p><i class="fa-solid fa-check"></i> Develop DINO$ token</p>
+                                    <p><i class="fa-solid fa-check"></i> Mint 2,000,000,000 tokens</p>
+                                    <p><i class="fa-solid fa-x"></i> Contract audit</p>
+                                    <p><i class="fa-solid fa-x"></i> Build the community</p>
+                                    <p><i class="fa-solid fa-x"></i> Preasle launch</p>
                                 </div>
                                 <div class="dots-container">
                                     <span class="dot" onclick="currentSlide(0)"></span>
@@ -476,6 +466,44 @@
                 </div>
             </div>
         </section>
+        <section id="contact-us">
+            <div class="container">
+                <h2>Contact Us</h2>
+                <p class="intro-text">
+                    Have questions, suggestions, or just want to share your favorite dinosaur pun? Drop us a line! We're
+                    all ears—or at least as much as a T-Rex can be.
+                </p>
+                <div class="contact-info">
+                    <p><strong>Email:</strong> <a href="mailto:contact@dinodollar.io">contact@dinodollar.io</a></p>
+                    <p><strong>Address:</strong> 65 Million B.C., Pangaea (Just kidding, we're fully digital!)</p>
+                </div>
+                <form id="contact-form" action="contact_form_handler.html" method="POST">
+                    <div class="form-group">
+                        <label for="name">Name<span>*</span></label>
+                        <input type="text" id="name" name="name" required placeholder="Your Name">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email<span>*</span></label>
+                        <input type="email" id="email" name="email" required placeholder="yourname@example.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message<span>*</span></label>
+                        <textarea id="message" name="message" required placeholder="Your Message"></textarea>
+                    </div>
+                    <button type="submit">Send Message</button>
+                </form>
+                <script src="js/scripts.js"></script>
+                <?php if (isset($_GET['success']) && $_GET['success'] == 1) { ?>
+                <div class="form-messages success">
+                    <p>Thank you! Your message has been sent.</p>
+                </div>
+                <?php } elseif (isset($_GET['success']) && $_GET['success'] == -1) { ?>
+                <div class="form-messages error">
+                    <p>Oops! Something went wrong. Please complete the form and try again.</p>
+                </div>
+                <?php } ?>
+            </div>
+        </section>
     </main>
     <!-- Footer -->
     <footer class="footer">
@@ -532,13 +560,14 @@
                     DISCLAIMER
                 </p>
                 <p>
-                    Cryptocurrencies are as volatile as a T-Rex on a trampoline. Always invest wisely and potentially
-                    clutch your dino plushie for comfort during bear markets.
+                    <!-- Cryptocurrencies are as volatile as a T-Rex on a trampoline. Always invest wisely and potentially
+                    clutch your dino plushie for comfort during bear markets. -->
+                    No dinosaurs were harmed in the making of this token. Invest responsibly; even Rich Rex had a
+                    diversified portfolio!
                 </p>
             </div>
         </div>
     </footer>
-    <script src="js/scripts.js"></script>
 </body>
 
 </html>
