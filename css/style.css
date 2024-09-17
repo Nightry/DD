@@ -402,9 +402,9 @@ h1 {
 .roadmap-content .gallery-slide {
 	border: 2px solid #f3a01b;
 	border-radius: 30px;
-	height: 23rem;
+	height: 100%;
+	padding: 0.5rem;
 }
-
 .roadmap p:not(.title) {
 	text-align: left;
 	margin-bottom: 0.2rem;
@@ -442,7 +442,7 @@ h1 {
 }
 .community i:hover {
 	transition: 0.5s;
-	color: goldenrod;
+	color: #daa520;
 }
 .community-links {
 	display: flex;
@@ -496,7 +496,7 @@ h1 {
 }
 .prev:hover,
 .next:hover {
-	color: goldenrod;
+	color: #daa520;
 }
 .dots-container {
 	margin-top: 0.5rem;
@@ -519,12 +519,12 @@ h1 {
 }
 .dot.active,
 .dot:hover {
-	background-color: goldenrod;
+	background-color: #daa520;
 }
 
 /* FAQ */
 .faq-container {
-	color: whitesmoke;
+	color: white;
 }
 .faq .faq-img {
 	display: flex;
@@ -657,18 +657,18 @@ h1 {
 	animation: fade-out 1s forwards;
 }
 .buybutton a:hover {
-	color: goldenrod;
+	color: #daa520;
 	transition: 0.5s;
 	background-color: #ffd4af;
 }
 .navbar ul li a:hover,
 .mobile-buybutton a:hover {
-	color: goldenrod;
+	color: #daa520;
 	transition: 0.5s;
 }
 .socials a:hover {
 	transition: 0.5s;
-	color: goldenrod;
+	color: #daa520;
 }
 @keyframes spin {
 	from {
@@ -679,7 +679,7 @@ h1 {
 	}
 }
 .footer .container a:hover {
-	color: goldenrod;
+	color: #daa520;
 	transition: 0.5s;
 }
 
@@ -803,28 +803,27 @@ h1 {
 		width: 100%;
 	}
 }
-@media (max-width: 500px) {
-	html {
-		font-size: 13px;
-	}
-	.roadmap-content .gallery-slider {
+@media (max-width: 570px) {
+	/* .roadmap-content .gallery-slider {
 		height: 400px;
 	}
 	.roadmap-content .gallery-slide {
 		border: 2px solid #f3a01b;
-		height: 340px;
+		height: 380px;
+	} */
+}
+
+@media (max-width: 480px) {
+	html {
+		font-size: 13px;
+	}
+	.roadmap-content .gallery-slider {
+		height: 450px;
 	}
 }
 
 @media (max-width: 400px) {
 	html {
 		font-size: 12px;
-	}
-	.roadmap-content .gallery-slider {
-		height: 400px;
-	}
-	.roadmap-content .gallery-slide {
-		border: 2px solid #f3a01b;
-		height: 340px;
 	}
 }
