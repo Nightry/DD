@@ -327,12 +327,13 @@ h1 {
 	display: flex;
 	text-align: left;
 	align-items: center;
-	justify-content: center;
-	gap: 2rem;
+	justify-content: space-between;
 }
 
 .richrex-content img {
 	width: 30rem;
+	margin: auto;
+	display: block;
 }
 
 /* Tokenomics section*/
@@ -395,6 +396,14 @@ h1 {
 	text-align: center;
 	gap: 5.7rem;
 }
+.roadmap-content .gallery-slider {
+	height: 28rem;
+}
+.roadmap-content .gallery-slide {
+	border: 2px solid #f3a01b;
+	border-radius: 30px;
+	height: 23rem;
+}
 
 .roadmap p:not(.title) {
 	text-align: left;
@@ -450,6 +459,7 @@ h1 {
 	justify-content: center;
 	margin: 0;
 	overflow: hidden;
+	position: relative;
 }
 .gallery-slide {
 	display: flex;
@@ -491,6 +501,11 @@ h1 {
 .dots-container {
 	margin-top: 0.5rem;
 	text-align: center;
+	/* position: absolute;
+	bottom: 0;
+	left: 40%; */
+	margin: 1rem auto;
+	display: block;
 }
 .dot {
 	cursor: pointer;
@@ -695,12 +710,21 @@ h1 {
 		margin: 0;
 		padding: 0;
 	}
+	.gallery {
+		display: block;
+	}
+	.roadmap-content {
+		display: block;
+	}
 	.coin {
-		margin: 3rem 0;
+		margin: 1rem 0;
 	}
 }
 
 @media (max-width: 900px) {
+	html {
+		font-size: 16px;
+	}
 	.socials a:hover,
 	.community-links i:hover {
 		color: white;
@@ -724,6 +748,10 @@ h1 {
 	.richrex-content p {
 		margin-bottom: 0.5rem;
 	}
+	.richrex-content .image {
+		margin-top: 1rem;
+		text-align: center;
+	}
 	.tokenomics-content {
 		display: block;
 	}
@@ -733,9 +761,6 @@ h1 {
 	.tokenomics-content p {
 		text-align: center;
 	}
-	.roadmap-content {
-		display: block;
-	}
 	.utility-content {
 		display: block;
 	}
@@ -743,9 +768,6 @@ h1 {
 		margin-bottom: 0.5rem;
 	}
 	.footer .container .footer-grid {
-		display: block;
-	}
-	.gallery {
 		display: block;
 	}
 	.roadmap-content img {
@@ -762,9 +784,6 @@ h1 {
 		display: grid;
 		grid-template-columns: 1fr 1fr;
 		grid-template-rows: 1fr 1fr 1fr;
-	}
-	.coin {
-		margin: 1rem 0;
 	}
 }
 
@@ -784,9 +803,28 @@ h1 {
 		width: 100%;
 	}
 }
+@media (max-width: 500px) {
+	html {
+		font-size: 13px;
+	}
+	.roadmap-content .gallery-slider {
+		height: 400px;
+	}
+	.roadmap-content .gallery-slide {
+		border: 2px solid #f3a01b;
+		height: 340px;
+	}
+}
 
 @media (max-width: 400px) {
 	html {
 		font-size: 12px;
+	}
+	.roadmap-content .gallery-slider {
+		height: 400px;
+	}
+	.roadmap-content .gallery-slide {
+		border: 2px solid #f3a01b;
+		height: 340px;
 	}
 }
