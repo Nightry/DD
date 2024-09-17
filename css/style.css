@@ -411,13 +411,6 @@ h1 {
 .roadmap-content i {
 	color: #f3a01b;
 }
-.roadmap-gallery-slider {
-	display: flex;
-	text-align: center;
-	align-items: center;
-	justify-content: center;
-	overflow: hidden;
-}
 
 /* Community section */
 .community-content {
