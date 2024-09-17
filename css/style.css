@@ -5,13 +5,13 @@
 	-webkit-tap-highlight-color: transparent;
 }
 html {
-	font-size: 20px;
+	font-size: 18px;
 	scroll-behavior: smooth;
 	scroll-padding-top: 7rem;
 }
 
 body {
-	font-family: 'Lato', sans-serif;
+	font-family: 'Lora', sans-serif;
 	font-weight: 400;
 	font-style: normal;
 	line-height: 1.5;
@@ -33,7 +33,7 @@ img {
 }
 
 section {
-	margin-bottom: 2rem;
+	margin-bottom: 5rem;
 }
 
 h2 {
@@ -42,7 +42,7 @@ h2 {
 	border-radius: 30px;
 	color: #f3a01b;
 	font-size: 2.5rem;
-	margin-bottom: 1rem;
+	margin-bottom: 2rem;
 	padding: 0.2rem 0.2rem;
 	text-align: center;
 }
@@ -272,16 +272,17 @@ h1 {
 }
 
 /*Welcome section*/
+.welcome-content {
+	margin-top: 2rem;
+}
 .welcome-content p {
-	text-align: center;
+	text-align: left;
 	margin-bottom: 1rem;
 }
 .welcome-content div {
-	text-align: center;
+	text-align: left;
 	align-items: center;
 	justify-content: center;
-	display: flex;
-	gap: 2rem;
 }
 
 /* Spinning coin */
@@ -324,14 +325,12 @@ h1 {
 /*Rich Rex section*/
 .richrex-content {
 	display: flex;
-	text-align: center;
+	text-align: left;
 	align-items: center;
 	justify-content: center;
 	gap: 2rem;
 }
-.richrex-content p {
-	text-align: center;
-}
+
 .richrex-content img {
 	width: 30rem;
 }
@@ -340,7 +339,6 @@ h1 {
 .tokenomics-content {
 	display: block;
 	gap: 2rem;
-	margin-bottom: 1rem;
 }
 .tokenomics-text {
 	display: grid;
@@ -368,9 +366,12 @@ h1 {
 .tokenomics-content span {
 	color: #f3a01b;
 }
-.tokenomics-content div {
+.tokenomics-quote {
+	border-top: 3px solid #f3a01b;
+	padding-top: 1rem;
 	text-align: center;
 }
+
 /* Utility section */
 .utility-content {
 	display: flex;
@@ -382,20 +383,17 @@ h1 {
 .utility img {
 	width: 30rem;
 }
-
-.utility p {
-	text-align: center;
+.utility-content p {
+	text-align: left;
 }
 
 /* Rodamap section */
 .roadmap-content {
-	/* display: grid;
-	grid-template-columns: 0.5fr 1fr; */
 	display: flex;
-	text-align: center;
 	align-items: center;
 	justify-content: center;
-	gap: 2rem;
+	text-align: center;
+	gap: 5.7rem;
 }
 
 .roadmap p:not(.title) {
@@ -413,6 +411,13 @@ h1 {
 .roadmap-content i {
 	color: #f3a01b;
 }
+.roadmap-gallery-slider {
+	display: flex;
+	text-align: center;
+	align-items: center;
+	justify-content: center;
+	overflow: hidden;
+}
 
 /* Community section */
 .community-content {
@@ -427,11 +432,9 @@ h1 {
 }
 
 .community p {
-	text-align: center;
 	margin-bottom: 1rem;
 }
 .community i {
-	text-align: center;
 	padding: 0.5rem 0.5rem;
 	font-size: 2rem;
 }
@@ -441,10 +444,10 @@ h1 {
 }
 .community-links {
 	display: flex;
-	text-align: center;
 	align-items: center;
 	justify-content: center;
 	gap: 0.5rem;
+	margin-bottom: 1rem;
 }
 /* Gallery section */
 .gallery-slider {
@@ -526,6 +529,8 @@ h1 {
 	border-bottom: 2px solid #ad8605;
 }
 .faq .faq-group .faq-group-header {
+	display: flex;
+	justify-content: space-between;
 	padding-top: 0.75rem;
 	margin-bottom: 1rem;
 	position: relative;
@@ -535,11 +540,9 @@ h1 {
 	width: 95%;
 }
 .faq .faq-group .faq-group-header i {
-	position: absolute;
-	right: 0;
-	top: 1.75rem;
 	font-size: 1.3rem;
 	cursor: pointer;
+	margin: 0.15rem 0 0 0.15rem;
 }
 .faq .faq-group .faq-group-body {
 	display: none;
@@ -549,24 +552,6 @@ h1 {
 .faq .faq-group .faq-group-body.open {
 	display: block;
 	margin-bottom: 0.75rem;
-}
-
-.form-messages {
-	display: flex;
-	justify-content: center;
-	margin-bottom: 20px;
-	padding: 10px;
-	border-radius: 4px;
-}
-.form-messages.success {
-	background-color: #d4edda;
-	color: #155724;
-	border: 1px solid #c3e6cb;
-}
-.form-messages.error {
-	background-color: #f8d7da;
-	color: #721c24;
-	border: 1px solid #f5c6cb;
 }
 
 /* Footer*/
@@ -613,7 +598,7 @@ h1 {
 	color: #f3a01b;
 }
 .footer .container .footer-grid div {
-	margin-bottom: 1.5rem;
+	margin-bottom: 2rem;
 }
 .disclaimer {
 	text-align: center;
@@ -709,19 +694,20 @@ h1 {
 	.navbar .container .buybutton {
 		display: none;
 	}
-
 	.navbar .container .logo {
 		margin-right: 0.5rem;
 	}
 	.scene {
 		background-image: none;
+		margin: 0;
+		padding: 0;
+	}
+	.coin {
+		margin: 3rem 0;
 	}
 }
 
 @media (max-width: 900px) {
-	html {
-		font-size: 18px;
-	}
 	.socials a:hover,
 	.community-links i:hover {
 		color: white;
