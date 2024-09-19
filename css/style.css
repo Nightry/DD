@@ -337,7 +337,7 @@ h1 {
 }
 
 .richrex-content img {
-	max-width: 30rem;
+	width: 30rem;
 }
 
 /* Tokenomics section*/
@@ -652,8 +652,6 @@ h1 {
 	max-width: 4rem;
 }
 .footer {
-	width: 100%;
-	max-width: 100%;
 	overflow: hidden;
 	color: #fff8e1;
 	background: #5c4033;
@@ -676,8 +674,9 @@ h1 {
 	font-size: 1.25rem;
 	margin: 0.5rem 0.1rem;
 }
-.footer .footer-grid div {
+.footer-grid div {
 	text-align: left;
+	margin-bottom: 2rem;
 }
 .footer .container .address {
 	text-align: center;
@@ -692,9 +691,6 @@ h1 {
 }
 .footer p span {
 	color: #f3a01b;
-}
-.footer .container .footer-grid div {
-	margin-bottom: 2rem;
 }
 .disclaimer {
 	text-align: center;
@@ -869,9 +865,6 @@ h1 {
 	.utility-content img {
 		margin-top: 1rem;
 	}
-	.footer .container .footer-grid {
-		display: block;
-	}
 	.roadmap-content img {
 		margin-bottom: 1rem;
 	}
@@ -882,6 +875,14 @@ h1 {
 		display: block;
 		text-align: center;
 	}
+	.footer-grid {
+		display: block;
+	}
+	.footer-grid div {
+		display: block;
+		text-align: center;
+	}
+
 	.tokenomics-text {
 		display: grid;
 		grid-template-columns: 1fr 1fr;
@@ -917,5 +918,8 @@ h1 {
 @media (max-width: 400px) {
 	.roadmap-gallery {
 		height: 40rem;
+	}
+	.navbar .container .logo a p {
+		display: none;
 	}
 }
