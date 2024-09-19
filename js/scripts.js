@@ -26,10 +26,10 @@ document.addEventListener('DOMContentLoaded', function () {
 	});
 });
 
-// Gallery
+// Roadmap-Gallery
 $(document).ready(function () {
 	// Initial setup to hide all slides except the first one
-	let slides = document.getElementsByClassName('gallery-slide');
+	let slides = document.getElementsByClassName('roadmap-gallery-slide');
 	for (let i = 1; i < slides.length; i++) {
 		slides[i].style.display = 'none';
 	}
@@ -43,8 +43,8 @@ $(document).ready(function () {
 
 	// Function to show slides
 	function showSlides(n) {
-		let slides = document.getElementsByClassName('gallery-slide');
-		let dots = document.getElementsByClassName('dot');
+		let slides = document.getElementsByClassName('roadmap-gallery-slide');
+		let dots = document.getElementsByClassName('roadmap-dot');
 		if (n >= slides.length) {
 			slideIndex = 0;
 		}
@@ -70,20 +70,20 @@ $(document).ready(function () {
 	}
 
 	// Function to move slides
-	function moveSlide(n) {
+	function roadmapmoveSlide(n) {
 		previousIndex = slideIndex;
 		showSlides((slideIndex += n));
 	}
 
 	// Function to set the current slide
-	function currentSlide(n) {
+	function roadmapSlide(n) {
 		previousIndex = slideIndex;
 		showSlides((slideIndex = n));
 	}
 
 	// Swipe functionality for mobile
 	let startX;
-	const slider = document.querySelector('.gallery-slider');
+	const slider = document.querySelector('.roadmap-gallery-slider');
 
 	slider.addEventListener('touchstart', (e) => {
 		startX = e.touches[0].clientX;
@@ -94,23 +94,105 @@ $(document).ready(function () {
 		let moveX = e.touches[0].clientX;
 		let diffX = startX - moveX;
 		if (diffX > 50) {
-			moveSlide(1);
+			roadmapmoveSlide(1);
 			startX = null;
 		} else if (diffX < -50) {
-			moveSlide(-1);
+			roadmapmoveSlide(-1);
 			startX = null;
 		}
 	});
 
-	// Automatic slide transition
-	// setInterval(() => {
-	// 	moveSlide(1);
-	// }, 15000);
-
 	// Expose functions to global scope for onclick handlers
-	window.moveSlide = moveSlide;
-	window.currentSlide = currentSlide;
+	window.roadmapmoveSlide = roadmapmoveSlide;
+	window.roadmapSlide = roadmapSlide;
 });
+
+
+//Gallery-Slider
+// $(document).ready(function () {
+// 	// Initial setup to hide all slides except the first one
+// 	let slides = document.getElementsByClassName('gallery-slide');
+// 	for (let i = 1; i < slides.length; i++) {
+// 		slides[i].style.display = 'none';
+// 	}
+
+// 	// Show the first slide
+// 	slides[0].style.display = 'flex';
+
+// 	// Initialize the slide index
+// 	let slideIndex = 0;
+// 	let previousIndex = 0;
+
+// 	// Function to show slides
+// 	function showSlides(n) {
+// 		let slides = document.getElementsByClassName('gallery-slide');
+// 		let dots = document.getElementsByClassName('dot');
+// 		if (n >= slides.length) {
+// 			slideIndex = 0;
+// 		}
+// 		if (n < 0) {
+// 			slideIndex = slides.length - 1;
+// 		}
+// 		for (let i = 0; i < slides.length; i++) {
+// 			slides[i].style.display = 'none';
+// 			slides[i].classList.remove('fade-in', 'fade-out');
+// 		}
+// 		slides[previousIndex].style.display = 'flex';
+// 		slides[previousIndex].classList.add('fade-out');
+// 		setTimeout(() => {
+// 			slides[previousIndex].style.display = 'none';
+// 			slides[slideIndex].style.display = 'flex';
+// 			slides[slideIndex].classList.add('fade-in');
+// 		}, 300);
+
+// 		for (let i = 0; i < dots.length; i++) {
+// 			dots[i].className = dots[i].className.replace(' active', '');
+// 		}
+// 		dots[slideIndex].className += ' active';
+// 	}
+
+// 	// Function to move slides
+// 	function moveSlide(n) {
+// 		previousIndex = slideIndex;
+// 		showSlides((slideIndex += n));
+// 	}
+
+// 	// Function to set the current slide
+// 	function currentSlide(n) {
+// 		previousIndex = slideIndex;
+// 		showSlides((slideIndex = n));
+// 	}
+
+// 	// Swipe functionality for mobile
+// 	let startX;
+// 	const slider = document.querySelector('.gallery-slider');
+
+// 	slider.addEventListener('touchstart', (e) => {
+// 		startX = e.touches[0].clientX;
+// 	});
+
+// 	slider.addEventListener('touchmove', (e) => {
+// 		if (!startX) return;
+// 		let moveX = e.touches[0].clientX;
+// 		let diffX = startX - moveX;
+// 		if (diffX > 50) {
+// 			moveSlide(1);
+// 			startX = null;
+// 		} else if (diffX < -50) {
+// 			moveSlide(-1);
+// 			startX = null;
+// 		}
+// 	});
+
+// 	// Automatic slide transition
+// 	setInterval(() => {
+// 		moveSlide(1);
+// 	}, 15000);
+
+// 	// Expose functions to global scope for onclick handlers
+// 	window.moveSlide = moveSlide;
+// 	window.currentSlide = currentSlide;
+// });
 
 // FAQ
 document.addEventListener('DOMContentLoaded', () => {
