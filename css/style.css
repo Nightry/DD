@@ -340,7 +340,7 @@ h3 {
 }
 
 .richrex-content img {
-	height: 25rem;
+	width: 35rem;
 }
 
 /* Tokenomics section*/
@@ -389,7 +389,7 @@ h3 {
 	gap: 2rem;
 }
 .utility img {
-	height: 25rem;
+	width: 35rem;
 }
 .utility-content p {
 	text-align: left;
@@ -438,7 +438,7 @@ h3 {
 	color: #f3a01b;
 }
 .roadmap-img {
-	height: 28rem;
+	width: 25rem;
 }
 .roadmap-gallery-slide p {
 	z-index: 1;
