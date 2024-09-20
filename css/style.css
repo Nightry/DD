@@ -438,7 +438,8 @@ h3 {
 	color: #f3a01b;
 }
 .roadmap-img {
-	width: 25rem;
+	width: auto;
+	height: 30rem;
 }
 .roadmap-gallery-slide p {
 	z-index: 1;
@@ -806,6 +807,10 @@ h3 {
 	.roadmap-dots-container {
 		grid-area: 3 / 1 / 4 / 4;
 	}
+	.roadmap-img {
+		width: auto;
+		height: 25rem;
+	}
 }
 
 @media (max-width: 700px) {
@@ -832,6 +837,6 @@ h3 {
 	.roadmap-content {
 		display: grid;
 		grid-template-columns: 0.1fr 1fr 0.1fr;
-		grid-template-rows: 0.6fr 1fr 0.1fr;
+		grid-template-rows: 0.8fr 1fr 0.1fr;
 	}
 }
