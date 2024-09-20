@@ -12,7 +12,7 @@ html {
 
 body {
 	font-family: 'Merriweather', sans-serif;
-	font-weight: 300;
+	font-weight: 600;
 	font-style: normal;
 	line-height: 1.5;
 	background: #1a442b;
@@ -21,9 +21,7 @@ a,
 p {
 	text-decoration: none;
 	color: white;
-	font-weight: bold;
 }
-
 ul {
 	list-style: none;
 }
@@ -38,7 +36,7 @@ section {
 
 h2 {
 	font-family: 'Oswald', sans-serif;
-	z-index: 1;
+	z-index: 10;
 	border-radius: 30px;
 	color: #f3a01b;
 	font-size: 2.5rem;
@@ -49,11 +47,16 @@ h2 {
 
 h1 {
 	font-family: 'Oswald', sans-serif;
-	z-index: 1;
+	z-index: 10;
 	color: #f3a01b;
 	font-size: 3rem;
 	margin-bottom: 0.5rem;
 	text-align: center;
+}
+h3 {
+	z-index: 10;
+	color: #f3a01b;
+	font-size: 1.5rem;
 }
 
 /* Delete after adding buybutton!!! */
@@ -337,7 +340,7 @@ h1 {
 }
 
 .richrex-content img {
-	width: 30rem;
+	height: 25rem;
 }
 
 /* Tokenomics section*/
@@ -386,7 +389,7 @@ h1 {
 	gap: 2rem;
 }
 .utility img {
-	width: 30rem;
+	height: 25rem;
 }
 .utility-content p {
 	text-align: left;
@@ -509,79 +512,6 @@ h1 {
 	gap: 0.5rem;
 	margin-bottom: 1rem;
 }
-/* Gallery section */
-/* .gallery-slider {
-	position: relative;
-	margin: 0;
-	overflow: hidden;
-}
-.gallery-slide {
-	display: none;
-	text-align: center;
-	height: 35rem;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	margin-left: 2rem;
-	margin-right: 2rem;
-	opacity: 1;
-}
-.gallery-slide img {
-	width: auto;
-	max-height: 35rem;
-}
-.gallery-slide p {
-	color: aliceblue;
-	background-color: #967969;
-	z-index: 1;
-	flex-direction: column;
-	padding: 0.5rem 0.5rem;
-	border-radius: 30px;
-	align-items: center;
-	justify-content: center;
-	text-align: center;
-}
-.prev,
-.next {
-	background: none;
-	cursor: pointer;
-	position: absolute;
-	top: 50%;
-	width: auto;
-	padding: 0.75rem;
-	color: whitesmoke;
-	font-weight: bold;
-	font-size: 2rem;
-	transition: 0.6s ease;
-	user-select: none;
-	transform: translateY(-50%);
-}
-.next {
-	right: 0;
-	border-radius: 3px 0 0 3px;
-}
-.prev:hover,
-.next:hover {
-	color: goldenrod;
-}
-.dots-container {
-	margin-top: 0.5rem;
-	text-align: center;
-}
-.dot {
-	cursor: pointer;
-	height: 0.75rem;
-	width: 0.75rem;
-	margin: 0 2px;
-	background-color: #bbb;
-	border-radius: 50%;
-	display: inline-block;
-	transition: background-color 0.6s ease;
-}
-.dot.active,
-.dot:hover {
-	background-color: goldenrod;
-} */
 
 /* FAQ */
 .faq-container {
@@ -592,7 +522,7 @@ h1 {
 	align-items: center;
 }
 .faq img {
-	width: 6rem;
+	width: 8rem;
 }
 .faq .faq-group {
 	border-bottom: 2px solid #ad8605;
@@ -621,6 +551,10 @@ h1 {
 .faq .faq-group .faq-group-body.open {
 	display: block;
 	margin-bottom: 0.75rem;
+}
+.faq img {
+	margin-right: 1rem;
+	margin-bottom: 1rem;
 }
 
 /* Footer*/
@@ -682,7 +616,7 @@ h1 {
 .howtobuy-content i {
 	margin: 0px 0.8rem;
 	font-size: 2rem;
-	color: #f3a01b;
+	color: white;
 }
 .howtobuy-content p {
 	margin-bottom: 1rem;
@@ -769,7 +703,6 @@ h1 {
 		margin: 0;
 		padding: 0;
 	}
-
 	.coin {
 		margin: 1rem 0;
 	}
@@ -808,7 +741,7 @@ h1 {
 		margin-bottom: 0.5rem;
 	}
 	.richrex-content img {
-		margin-top: 1rem;
+		margin-bottom: 2rem;
 	}
 	.tokenomics-content {
 		display: block;
@@ -826,7 +759,7 @@ h1 {
 		margin-bottom: 0.5rem;
 	}
 	.utility-content img {
-		margin-top: 1rem;
+		margin-top: 2rem;
 	}
 	.roadmap-content img {
 		margin-bottom: 1rem;
