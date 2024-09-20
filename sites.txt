@@ -1,5 +1,0 @@
-<meta property="og:type" content="website">
-<meta property="og:title" content="DinoDollar (DINO$) | The cutting-edge ancient technology">
-<meta property="og:url" content="https://dinodollar.world">
-<meta property="og:image" content="https://bafybeigwwjefkyv4bhrw4wo2rqgxbxazolby2mhh4dbsw7nho4eudqix24.ipfs.w3s.link/DinoDollar.png">
-<meta property="og:description" content="DinoDollar (DINO$) - The most dino-mite meme token roaring on the lightning-fast, low-cost, super-secure Solana blockchain!">
