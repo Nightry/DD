@@ -536,7 +536,7 @@ h3 {
 	position: relative;
 }
 .faq .faq-group .faq-group-header h4 {
-	font-weight: 500;
+	font-weight: 600;
 	width: 95%;
 }
 .faq .faq-group .faq-group-header i {
@@ -548,6 +548,7 @@ h3 {
 	display: none;
 	overflow: hidden;
 	margin-bottom: 0.75rem;
+	font-weight: 500;
 }
 .faq .faq-group .faq-group-body.open {
 	display: block;
@@ -590,6 +591,10 @@ h3 {
 	margin-top: 0.5rem;
 	padding-bottom: 0.5rem;
 	border-bottom: 2px solid;
+}
+.footer-community{
+	display: flex;
+	flex-direction: column;
 }
 .footer .container a {
 	padding: 0;
