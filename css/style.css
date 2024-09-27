@@ -610,25 +610,6 @@ h3 {
 	margin-top: 1rem;
 }
 
-/* HOWTOBUY site*/
-.howtobuy-content {
-	display: block;
-	text-align: center;
-	margin: 10rem 0;
-}
-.howtobuy-content div {
-	margin: 1.5rem;
-}
-.howtobuy-content i {
-	margin: 0px 0.8rem;
-	font-size: 2rem;
-	color: white;
-}
-.howtobuy-content p {
-	margin-bottom: 1rem;
-	gap: 2rem;
-}
-
 /* Animations*/
 @keyframes fade-in {
 	from {
