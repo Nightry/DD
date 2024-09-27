@@ -1,0 +1,41 @@
+/* HOWTOBUY site*/
+.howtobuy-content {
+	display: block;
+	text-align: center;
+	margin: 5rem 0 0 0 ;
+	border: 3px solid #f3a01b;
+	border-radius: 30px;
+}
+.howtobuy-content div {
+	margin: 1.5rem;
+}
+.howtobuy-content i {
+	margin: 0px 0.8rem;
+	font-size: 2rem;
+	color: white;
+}
+.howtobuy-content p {
+	margin-bottom: 1rem;
+	gap: 2rem;
+}
+.caution{
+	display: flex;
+align-items: center;
+margin-top: 5rem;
+}
+.caution img{
+	width: 10rem;
+}
+.caution p{
+    margin: 1rem;
+}
+
+
+@media (max-width: 700px) {
+	.caution{
+		flex-direction: column;
+	}
+	.caution-right{
+		display: none;
+	}
+}
