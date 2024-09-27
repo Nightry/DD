@@ -29,6 +29,11 @@ margin-top: 5rem;
 .caution p{
     margin: 1rem;
 }
+.howtobuy-content a:hover,
+.howtobuy-content i:hover{
+		transition: 0.5s;
+		color: #daa520;
+}
 
 
 @media (max-width: 700px) {
